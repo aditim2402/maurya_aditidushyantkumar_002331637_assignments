@@ -11,10 +11,11 @@ package model;
 public class Person {
     private String firstName;               
     private String lastName;                
-    private String socialSecurityNumber;    
+    private double salary;;    
     private int age;                                     
     private char gender;                  
     private long contactNumber; 
+    
     public String getFirstName() {
         return firstName;
     }
@@ -31,12 +32,12 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public String getSocialSecurityNumber() {
-        return socialSecurityNumber;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setSocialSecurityNumber(String socialSecurityNumber) {
-        this.socialSecurityNumber = socialSecurityNumber;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
     public int getAge() {
@@ -62,4 +63,11 @@ public class Person {
     public void setContactNumber(long contactNumber) {
         this.contactNumber = contactNumber;
     }
+    private String firstName;               
+    private String lastName;                
+    private double salary;;    
+    private int age;                                     
+    private char gender;                  
+    private long contactNumber; 
+    
 }
