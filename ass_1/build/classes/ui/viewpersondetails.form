@@ -17,74 +17,80 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="lblview" alignment="1" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="txtdln" linkSize="1" min="-2" pref="92" max="-2" attributes="0"/>
-                  <Component id="txtssn" linkSize="1" min="-2" pref="92" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="lbldriverlicst" linkSize="1" min="-2" pref="125" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txtdrlst" linkSize="1" min="-2" pref="92" max="-2" attributes="0"/>
+                      <Component id="lblemail" linkSize="1" min="-2" pref="63" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtemail" linkSize="6" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtfirstname" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lbldriverlicno" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="lbldriverlicst" linkSize="1" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="lblcity" linkSize="1" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lblssn" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbladdr1" linkSize="1" min="-2" pref="91" max="-2" attributes="0"/>
+                          <Component id="lbladdr2" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblstate" linkSize="1" min="-2" pref="63" max="-2" attributes="0"/>
+                          <Component id="lblzip" linkSize="1" min="-2" pref="63" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtssn" linkSize="6" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtdln" linkSize="6" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtdrlst" linkSize="6" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtaddr1" linkSize="6" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtaddr2" linkSize="6" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtcity" linkSize="6" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtst" linkSize="6" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="txtzip" linkSize="6" min="-2" pref="92" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="146" max="32767" attributes="0"/>
-              <Component id="lbltelno" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="txttelno" linkSize="2" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <EmptySpace pref="337" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lbllastname" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblphone" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbltelno" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblfax" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblhobbies" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbllang" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbled" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblvisatype" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbldob" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblgender" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="txtvisatype" alignment="0" pref="92" max="32767" attributes="0"/>
+                      <Component id="txted" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtlang" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txthobbies" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtfax" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txttelno" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtlastname" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtphone" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtdob" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="txtgender" min="-2" pref="92" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="222" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblemail" linkSize="1" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
-                      <Component id="lbldriverlicno" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblfirstname" linkSize="1" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
-                      <Component id="lblssn" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblstate" linkSize="1" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
-                      <Component id="lblzip" linkSize="1" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
-                      <Component id="lblcity" linkSize="1" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="lbladdr2" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbladdr1" linkSize="1" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtfirstname" linkSize="1" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
-                      <Component id="txtemail" linkSize="1" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
-                      <Component id="txtaddr1" linkSize="1" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
-                      <Component id="txtaddr2" linkSize="1" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
-                      <Component id="txtcity" linkSize="1" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
-                      <Component id="txtst" linkSize="1" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
-                      <Component id="txtzip" linkSize="1" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblfax" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbllang" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblhobbies" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbled" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbllastname" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblgender" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblphone" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbldob" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblvisatype" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtlastname" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtphone" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtfax" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txthobbies" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtlang" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txted" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtvisatype" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtdob" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtgender" linkSize="2" alignment="0" pref="101" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="lblfirstname" linkSize="1" min="-2" pref="63" max="-2" attributes="0"/>
+                  <EmptySpace pref="878" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -94,128 +100,122 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Component id="lblview" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="txtfirstname" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbltelno" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txttelno" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtemail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblemail" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtdln" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbldriverlicno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtdrlst" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblssn" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtaddr1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbladdr1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtaddr2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbladdr2" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtcity" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblcity" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtst" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblstate" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txtzip" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblzip" min="-2" pref="23" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtdln" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbldriverlicst" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                              <Component id="txtssn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtlastname" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbllastname" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtphone" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblphone" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lbltelno" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txttelno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtfax" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblfax" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblhobbies" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txthobbies" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtlang" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbllang" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txted" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbled" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtvisatype" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblvisatype" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtdob" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbldob" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtgender" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblgender" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="237" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbldriverlicst" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="txtdrlst" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="txtssn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="254" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="lblfirstname" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lblemail" min="-2" pref="23" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="txtfirstname" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="txtemail" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="lbldriverlicno" min="-2" pref="23" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbllastname" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtlastname" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblphone" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtphone" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblfax" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtfax" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Component id="lblssn" min="-2" pref="23" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbladdr1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txtaddr1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="lbladdr2" min="-2" pref="23" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblcity" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txtcity" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblstate" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txtst" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblzip" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txtzip" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblhobbies" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txthobbies" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbllang" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtlang" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbled" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtaddr2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txted" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblvisatype" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtvisatype" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbldob" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtdob" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblgender" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtgender" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="63" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="lblfirstname" min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace pref="550" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -259,14 +259,23 @@
     <Component class="javax.swing.JTextField" name="txtcity">
     </Component>
     <Component class="javax.swing.JTextField" name="txtst">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtstActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtzip">
     </Component>
     <Component class="javax.swing.JTextField" name="txtlastname">
     </Component>
     <Component class="javax.swing.JTextField" name="txtphone">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtphoneActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txttelno">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttelnoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtfax">
       <Events>
@@ -326,12 +335,21 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtfirstname">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfirstnameActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtdrlst">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdrlstActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtemail">
     </Component>
     <Component class="javax.swing.JTextField" name="txtdln">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdlnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtaddr1">
     </Component>
