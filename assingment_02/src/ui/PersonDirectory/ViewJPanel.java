@@ -24,8 +24,9 @@ public class ViewJPanel extends javax.swing.JPanel {
     
     public ViewJPanel(JPanel userProcessContainer, PersonDirectory personDirectory, Person person) {
         initComponents();
-        this.userProcessContainer= userProcessContainer;
-        this.person= person;
+        this.userProcessContainer = userProcessContainer;
+        this.person = person;
+        
         refreshTextFields();
         setViewMode();
     }
@@ -148,17 +149,28 @@ public class ViewJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
                         .addComponent(btnback)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(248, 248, 248)
+                        .addGap(47, 47, 47)
+                        .addComponent(lblworkcity)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblworkstate)
+                        .addGap(152, 152, 152))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtworkcity, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(lblworkzipcode))
+                            .addComponent(txtworkzipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(63, 63, 63)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtworkzipcode, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                            .addComponent(txtworkcity)
                             .addComponent(lblfirstname)
                             .addComponent(lblsalary)
                             .addComponent(lblgender)
@@ -172,13 +184,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(txtzipcode, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblworkstreetaddress)
                             .addComponent(txtworkstreetaddress)
-                            .addComponent(lblworkcity)
-                            .addComponent(lblworkzipcode)
-                            .addComponent(txtgender))
+                            .addComponent(txtgender, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
                         .addGap(138, 138, 138)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblworkphoneno)
-                            .addComponent(lblworkstate)
                             .addComponent(lbllastname)
                             .addComponent(lblage)
                             .addComponent(lblheight)
@@ -191,18 +199,22 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(txtage)
                             .addComponent(lblworkunitno)
                             .addComponent(txtworkunitno)
-                            .addComponent(txtworkstate)
-                            .addComponent(txtworkphnno)
                             .addComponent(txtlastname)
                             .addComponent(txtphoneno))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(352, 352, 352)
-                .addComponent(btnsave)
-                .addGap(86, 86, 86)
-                .addComponent(btnupdate)
-                .addContainerGap(432, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtworkstate, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblworkphoneno)
+                                    .addComponent(txtworkphnno, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(35, 35, 35))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(63, 63, 63)
+                                .addComponent(btnsave)
+                                .addGap(42, 42, 42)
+                                .addComponent(btnupdate)
+                                .addContainerGap(67, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,15 +222,19 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnback)
-                            .addComponent(jLabel19))
-                        .addGap(7, 7, 7)
-                        .addComponent(lblfirstname)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtlastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnback)
+                                    .addComponent(jLabel19)
+                                    .addComponent(btnupdate))
+                                .addGap(7, 7, 7)
+                                .addComponent(lblfirstname)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtlastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnsave, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblsalary)
@@ -240,22 +256,36 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addComponent(lblheight)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtheight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblstreetaddress)
-                    .addComponent(lblunitno))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtstreetaddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtunitno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lblworkcity)
+                    .addComponent(lblworkstate, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblcity)
-                    .addComponent(lblstate))
+                    .addComponent(lblstreetaddress)
+                    .addComponent(lblunitno)
+                    .addComponent(txtworkcity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtworkstate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtstreetaddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtunitno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblcity)
+                            .addComponent(lblstate)
+                            .addComponent(lblworkzipcode)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(lblworkphoneno)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtcity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtstate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtstate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtworkzipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtworkphnno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblzipcode)
@@ -272,27 +302,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtworkunitno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtworkstreetaddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblworkcity)
-                    .addComponent(lblworkstate, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtworkcity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtworkstate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblworkzipcode)
-                    .addComponent(lblworkphoneno))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtworkzipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtworkphnno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnupdate)
-                    .addComponent(btnsave, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -415,7 +425,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         }
         
         try {
-            phoneNoWA = Long.parseLong(txtworkphoneno2.getText());
+            phoneNoWA = Long.parseLong(txtworkphnno.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Please check the Work Phone No. input.","Warning", JOptionPane.WARNING_MESSAGE);
             return;
@@ -508,6 +518,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void refreshTextFields() {
+        
         txtfirstname.setText(person.getfName());
         txtlastname.setText(person.getlName());
         txtage.setText(Integer.toString(person.getAge()));
@@ -523,67 +534,61 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtworkstreetaddress.setText(person.getWorkAddress().getStreetAddress());
         txtworkunitno.setText(Integer.toString(person.getWorkAddress().getUnitNo()));
         txtworkcity.setText(person.getWorkAddress().getCity());
-        txtzipcode.setText(person.getWorkAddress().getState());
+        txtworkstate.setText(person.getWorkAddress().getState());
         txtworkzipcode.setText(Integer.toString(person.getWorkAddress().getZipCode()));
-        txtworkphoneno2.setText(Long.toString(person.getWorkAddress().getPhoneNo()));
+        txtworkphnno.setText(Long.toString(person.getWorkAddress().getPhoneNo()));
+        
+        
     }
 
     private void setViewMode() {
-            // Disable personal information fields
-    txtfirstname.setEnabled(false);
-    txtlastname.setEnabled(false);
-    txtsalary.setEnabled(false);
-    txtage.setEnabled(false);
-    txtgender.setEnabled(false);
-    txtheight.setEnabled(false);
-
-    // Disable home address fields
-    txtstreetaddress.setEnabled(false);
-    txtunitno.setEnabled(false);
-    txtcity.setEnabled(false);
-    txtstate.setEnabled(false);
-    txtzipcode.setEnabled(false);
-    txtphoneno.setEnabled(false);
-
-    // Disable work address fields
-    txtworkstreetaddress.setEnabled(false);
-    txtworkcity.setEnabled(false);
-    txtworkstate.setEnabled(false);
-    txtworkzipcode.setEnabled(false);
-    txtworkphnno.setEnabled(false);
-
-    // Disable "Save" button and enable "Update" button
-    btnback.setEnabled(false);
-    btnupdate.setEnabled(true);
+        txtfirstname.setEnabled(false);
+        txtlastname.setEnabled(false);
+        txtsalary.setEnabled(false);
+        txtage.setEnabled(false);
+        txtgender.setEnabled(false);
+        txtheight.setEnabled(false);
+        txtstreetaddress.setEnabled(false);
+        txtunitno.setEnabled(false);
+        txtcity.setEnabled(false);
+        txtstate.setEnabled(false);
+        txtzipcode.setEnabled(false);
+        txtphoneno.setEnabled(false);
+        txtworkstreetaddress.setEnabled(false);
+        txtworkunitno.setEnabled(false);
+        txtworkcity.setEnabled(false);
+        txtworkstate.setEnabled(false);
+        txtworkzipcode.setEnabled(false);
+        txtworkphnno.setEnabled(false);
+        
+        btnsave.setEnabled(false);
+        btnupdate.setEnabled(true);    
+            
 
     }
     private void setEditMode() {
-        // Enable personal information fields
-    txtfirstname.setEnabled(true);
-    txtlastname.setEnabled(true);
-    txtsalary.setEnabled(true);
-    txtage.setEnabled(true);
-    txtgender.setEnabled(true);
-    txtheight.setEnabled(true);
+      txtfirstname.setEnabled(true);
+      txtlastname.setEnabled(true);
+      txtsalary.setEnabled(true);
+      txtage.setEnabled(true);
+      txtgender.setEnabled(true);
+      txtheight.setEnabled(true);
+      txtstreetaddress.setEnabled(true);
+      txtunitno.setEnabled(true);  // Keep this one false
+      txtcity.setEnabled(true);
+      txtstate.setEnabled(true);
+      txtzipcode.setEnabled(true);
+      txtphoneno.setEnabled(true);
+      txtworkstreetaddress.setEnabled(true);
+      txtworkunitno.setEnabled(true);
+      txtworkcity.setEnabled(true);
+      txtworkstate.setEnabled(true);
+      txtworkzipcode.setEnabled(true);
+      txtworkphnno.setEnabled(true);
 
-    // Enable home address fields
-    txtstreetaddress.setEnabled(true);
-    txtunitno.setEnabled(true);
-    txtcity.setEnabled(true);
-    txtstate.setEnabled(true);
-    txtzipcode.setEnabled(true);
-    txtphoneno.setEnabled(true);
+      btnsave.setEnabled(true);  // Enabling the save button
+      btnupdate.setEnabled(false);
 
-    // Enable work address fields
-    txtworkstreetaddress.setEnabled(true);
-    txtworkcity.setEnabled(true);
-    txtworkstate.setEnabled(true);
-    txtworkzipcode.setEnabled(true);
-    txtworkphnno.setEnabled(true);
-
-    // Enable "Save" button and disable "Update" button
-    btnback.setEnabled(true);
-    btnupdate.setEnabled(false);
 
     }
 }

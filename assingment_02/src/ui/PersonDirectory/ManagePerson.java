@@ -37,7 +37,7 @@ public class ManagePerson extends javax.swing.JPanel {
     private void initComponents() {
 
         tblperson = new javax.swing.JScrollPane();
-        tblPerson = new javax.swing.JTable();
+        tblProfile = new javax.swing.JTable();
         btnsearch = new javax.swing.JButton();
         btnview = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
@@ -45,7 +45,7 @@ public class ManagePerson extends javax.swing.JPanel {
         btnback = new javax.swing.JButton();
         lblManagePersonDetails = new javax.swing.JLabel();
 
-        tblPerson.setModel(new javax.swing.table.DefaultTableModel(
+        tblProfile.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -56,7 +56,7 @@ public class ManagePerson extends javax.swing.JPanel {
                 "First Name", "Last Name", "Home City", "Home ZipCode", "Work City", "WorK Zipcode"
             }
         ));
-        tblperson.setViewportView(tblPerson);
+        tblperson.setViewportView(tblProfile);
 
         btnsearch.setText("Search");
         btnsearch.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +139,7 @@ public class ManagePerson extends javax.swing.JPanel {
             if (foundProfile != null){
                 
                 ViewJPanel panel = new ViewJPanel(userProcessContainer, personDirectory, foundProfile);
-                userProcessContainer.add("View panel", panel);
+                userProcessContainer.add("ViewJPanel", panel);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
@@ -154,16 +154,18 @@ public class ManagePerson extends javax.swing.JPanel {
     }//GEN-LAST:event_btnsearchActionPerformed
 
     private void btnviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewActionPerformed
-         int selectedRow = tblPerson.getSelectedRow();
-        if(selectedRow>=0){
-          Person selectedAccount=(Person)tblPerson.getValueAt(selectedRow,0);
-          
-          ViewJPanel panel = new ViewJPanel(userProcessContainer,personDirectory, selectedAccount);
-          userProcessContainer.add("ViewAccountJPanel", panel);
-          CardLayout layout= (CardLayout)userProcessContainer.getLayout();
-          layout.next(userProcessContainer);
-        }else{
-            JOptionPane.showMessageDialog(null,"Please select the person from the list to view .", "Warning", JOptionPane.WARNING_MESSAGE);
+         int selectedRow = tblProfile.getSelectedRow();
+        
+        if (selectedRow >= 0){
+            Person selectedPerson = (Person) tblProfile.getValueAt(selectedRow, 0);
+            
+            ViewJPanel panel = new ViewJPanel(userProcessContainer, personDirectory, selectedPerson);
+            userProcessContainer.add("ViewJPanel", panel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Please select a profile from the list to view details", "Warning", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnviewActionPerformed
 
@@ -174,16 +176,19 @@ public class ManagePerson extends javax.swing.JPanel {
     }//GEN-LAST:event_btnbackActionPerformed
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
-        int selectedRow = tblPerson.getSelectedRow();
-        if(selectedRow>=0){
-          Person selectedAccount=(Person)tblPerson.getValueAt(selectedRow,0);
-          
-          ViewJPanel panel = new ViewJPanel(userProcessContainer,personDirectory, selectedAccount);
-          userProcessContainer.add("View Person Details", panel);
-          CardLayout layout= (CardLayout)userProcessContainer.getLayout();
-          layout.next(userProcessContainer);
-        }else{
-            JOptionPane.showMessageDialog(null,"Please select the person you want to view from the list", "Warning", JOptionPane.WARNING_MESSAGE);
+        int selectedRow = tblProfile.getSelectedRow();
+        
+        if (selectedRow >= 0) {
+            int dialogButton = JOptionPane.YES_NO_OPTION;
+            int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete the selected profile?","Warning",dialogButton);
+            if (dialogResult == JOptionPane.YES_OPTION) {
+                Person selectedPerson = (Person) tblProfile.getValueAt(selectedRow, 0);
+                personDirectory.deletePerson(selectedPerson);
+                populateTable();
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Please select a profile from the list.","Warning", JOptionPane.WARNING_MESSAGE);
+            }
         }
     }//GEN-LAST:event_btndeleteActionPerformed
 
@@ -194,7 +199,7 @@ public class ManagePerson extends javax.swing.JPanel {
     private javax.swing.JButton btnsearch;
     private javax.swing.JButton btnview;
     private javax.swing.JLabel lblManagePersonDetails;
-    private javax.swing.JTable tblPerson;
+    private javax.swing.JTable tblProfile;
     private javax.swing.JScrollPane tblperson;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
@@ -202,7 +207,7 @@ public class ManagePerson extends javax.swing.JPanel {
     public void populateTable() {
         {
     
-        DefaultTableModel model = (DefaultTableModel) tblPerson.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblProfile.getModel();
         model.setRowCount(0);
 
         for (Person a : personDirectory.getPersons()) {
@@ -210,8 +215,8 @@ public class ManagePerson extends javax.swing.JPanel {
 
     // Person details
             
-            row[0] = a;  // First name
-            row[1] = a.getlName();   // Last name
+            row[0] = a;  
+            row[1] = a.getlName(); 
             row[2] = a.getHomeAddress().getCity();        
             row[3] = a.getHomeAddress().getZipCode();
             row[4]=a.getWorkAddress().getCity();

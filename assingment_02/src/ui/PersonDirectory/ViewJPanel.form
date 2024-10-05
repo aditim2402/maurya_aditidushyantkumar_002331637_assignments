@@ -16,19 +16,33 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="btnback" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel19" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="lblworkcity" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lblworkstate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtworkcity" min="-2" pref="154" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="lblworkzipcode" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txtworkzipcode" min="-2" pref="154" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtworkzipcode" alignment="0" pref="154" max="32767" attributes="0"/>
-                          <Component id="txtworkcity" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblfirstname" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblsalary" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblgender" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -42,14 +56,10 @@
                           <Component id="txtzipcode" alignment="1" max="32767" attributes="0"/>
                           <Component id="lblworkstreetaddress" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtworkstreetaddress" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblworkcity" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblworkzipcode" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtgender" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtgender" alignment="0" pref="154" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="lblworkphoneno" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblworkstate" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lbllastname" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblage" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblheight" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -62,22 +72,29 @@
                           <Component id="txtage" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblworkunitno" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtworkunitno" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtworkstate" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtworkphnno" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtlastname" max="32767" attributes="0"/>
                           <Component id="txtphoneno" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtworkstate" min="-2" pref="158" max="-2" attributes="0"/>
+                                  <Component id="lblworkphoneno" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtworkphnno" min="-2" pref="158" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="btnsave" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="btnupdate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="67" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
-              <Component id="btnsave" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-              <Component id="btnupdate" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="432" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -87,16 +104,22 @@
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnback" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="lblfirstname" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtfirstname" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="txtlastname" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="btnback" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnupdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="lblfirstname" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtfirstname" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Component id="txtlastname" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="btnsave" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -127,25 +150,43 @@
                       <Component id="txtheight" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblworkcity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblworkstate" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblstreetaddress" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblunitno" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtworkcity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtworkstate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtstreetaddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtunitno" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblcity" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblstate" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtstreetaddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtunitno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblcity" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblstate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblworkzipcode" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="lblworkphoneno" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtcity" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtstate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtworkzipcode" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtworkphnno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -167,32 +208,7 @@
                   <Component id="txtworkunitno" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtworkstreetaddress" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblworkcity" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblworkstate" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtworkcity" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtworkstate" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblworkzipcode" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblworkphoneno" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtworkzipcode" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtworkphnno" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnupdate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnsave" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
+              <EmptySpace pref="157" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

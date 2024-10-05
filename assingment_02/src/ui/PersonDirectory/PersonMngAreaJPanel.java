@@ -37,8 +37,6 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
 
         btnaddperson = new javax.swing.JButton();
         btnlistname = new javax.swing.JButton();
-        txtsearch = new javax.swing.JTextField();
-        btnsearchforaddress = new javax.swing.JButton();
 
         btnaddperson.setText("Add Person");
         btnaddperson.addActionListener(new java.awt.event.ActionListener() {
@@ -54,10 +52,6 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtsearch.setText("Type name or street address");
-
-        btnsearchforaddress.setText("Search for Address");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,10 +59,8 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtsearch)
                     .addComponent(btnlistname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnaddperson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnsearchforaddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnaddperson, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
                 .addContainerGap(864, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -78,11 +70,7 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnaddperson)
                 .addGap(27, 27, 27)
                 .addComponent(btnlistname)
-                .addGap(75, 75, 75)
-                .addComponent(txtsearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnsearchforaddress)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addContainerGap(506, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -106,7 +94,5 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnaddperson;
     private javax.swing.JButton btnlistname;
-    private javax.swing.JButton btnsearchforaddress;
-    private javax.swing.JTextField txtsearch;
     // End of variables declaration//GEN-END:variables
 }
