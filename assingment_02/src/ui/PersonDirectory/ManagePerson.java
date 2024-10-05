@@ -4,17 +4,23 @@
  */
 package ui.PersonDirectory;
 
+
+
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import model.PersonDirectory;
 /**
  *
  * @author aditi
  */
 public class ManagePerson extends javax.swing.JPanel {
 
-    /**
-     * Creates new form ManagePerson
-     */
-    public ManagePerson() {
+    JPanel userProcessContainer;
+    PersonDirectory personDirectory;
+    public ManagePerson(JPanel container, PersonDirectory directory) {
         initComponents();
+        userProcessContainer= container;
+        personDirectory= directory;
     }
 
     /**
@@ -26,14 +32,14 @@ public class ManagePerson extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
+        tblperson = new javax.swing.JScrollPane();
         tblPerson = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnsearch = new javax.swing.JButton();
+        btnview = new javax.swing.JButton();
+        btndelete = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnback = new javax.swing.JButton();
+        lblManagePersonDetails = new javax.swing.JLabel();
 
         tblPerson.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -46,70 +52,99 @@ public class ManagePerson extends javax.swing.JPanel {
                 "First Name", "Last Name", "Social Security Number", "Age", "Gender", "Contact Number"
             }
         ));
-        jScrollPane1.setViewportView(tblPerson);
+        tblperson.setViewportView(tblPerson);
 
-        jButton1.setText("Search");
+        btnsearch.setText("Search");
+        btnsearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsearchActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("View");
+        btnview.setText("View");
+        btnview.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnviewActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Delete");
+        btndelete.setText("Delete");
 
-        jButton4.setText("<<<Back");
+        btnback.setText("<<<Back");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Manage Person Details");
+        lblManagePersonDetails.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblManagePersonDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblManagePersonDetails.setText("Manage Person Details");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
+            .addComponent(tblperson, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btndelete, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                    .addComponent(btnview, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnsearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(63, 63, 63)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jButton4)
+                .addComponent(btnback)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblManagePersonDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jLabel1))
+                    .addComponent(btnback)
+                    .addComponent(lblManagePersonDetails))
                 .addGap(26, 26, 26)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tblperson, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnsearch)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btnview)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(btndelete)
                 .addContainerGap(154, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnsearchActionPerformed
+
+    private void btnviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnviewActionPerformed
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        userProcessContainer.remove(this);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.previous(userProcessContainer); 
+    }//GEN-LAST:event_btnbackActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton btnback;
+    private javax.swing.JButton btndelete;
+    private javax.swing.JButton btnsearch;
+    private javax.swing.JButton btnview;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblManagePersonDetails;
     private javax.swing.JTable tblPerson;
+    private javax.swing.JScrollPane tblperson;
     // End of variables declaration//GEN-END:variables
 }

@@ -20,9 +20,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnback" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel19" max="32767" attributes="0"/>
+                      <Component id="lblCreatePerson" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -33,12 +33,12 @@
                                       <Component id="txtworkzipcode" alignment="0" pref="154" max="32767" attributes="0"/>
                                       <Component id="txtworkcity" alignment="0" max="32767" attributes="0"/>
                                       <Component id="lblfirstname" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblssn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblsalary" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblgender" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblstreetaddress" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblcity" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblzipcode" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtssn" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtsalary" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txtgender" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txtfirstname" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txtstreetaddress" alignment="0" max="32767" attributes="0"/>
@@ -93,8 +93,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnback" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCreatePerson" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Component id="lblfirstname" min="-2" max="-2" attributes="0"/>
@@ -102,12 +102,12 @@
                       <Component id="txtfirstname" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblssn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblsalary" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblage" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtssn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtsalary" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtage" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -216,9 +216,9 @@
         <Property name="text" type="java.lang.String" value="Last Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblssn">
+    <Component class="javax.swing.JLabel" name="lblsalary">
       <Properties>
-        <Property name="text" type="java.lang.String" value="SocialSecurityNumber"/>
+        <Property name="text" type="java.lang.String" value="Salary"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblage">
@@ -243,7 +243,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtage">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtssn">
+    <Component class="javax.swing.JTextField" name="txtsalary">
     </Component>
     <Component class="javax.swing.JTextField" name="txtcontactno">
     </Component>
@@ -293,6 +293,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Create"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btncreateActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblworkstreetaddress">
       <Properties>
@@ -339,12 +342,15 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtworkphonenoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btnback">
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;&lt;&lt; Back"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbackActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel19">
+    <Component class="javax.swing.JLabel" name="lblCreatePerson">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>

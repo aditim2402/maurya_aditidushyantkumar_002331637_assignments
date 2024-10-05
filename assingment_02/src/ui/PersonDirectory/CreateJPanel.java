@@ -4,17 +4,22 @@
  */
 package ui.PersonDirectory;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import model.PersonDirectory;
+
 /**
  *
  * @author aditi
  */
 public class CreateJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CreateJPanel
-     */
-    public CreateJPanel() {
+    JPanel userProcessContainer;
+    PersonDirectory personDirectory;
+    public CreateJPanel(JPanel container, PersonDirectory directory) {
         initComponents();
+        userProcessContainer= container;
+        personDirectory= directory;
     }
 
     /**
@@ -30,13 +35,13 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtlastname = new javax.swing.JTextField();
         lblfirstname = new javax.swing.JLabel();
         lbllastname = new javax.swing.JLabel();
-        lblssn = new javax.swing.JLabel();
+        lblsalary = new javax.swing.JLabel();
         lblage = new javax.swing.JLabel();
         lblgender = new javax.swing.JLabel();
         lblcontactno = new javax.swing.JLabel();
         txtgender = new javax.swing.JTextField();
         txtage = new javax.swing.JTextField();
-        txtssn = new javax.swing.JTextField();
+        txtsalary = new javax.swing.JTextField();
         txtcontactno = new javax.swing.JTextField();
         lblstreetaddress = new javax.swing.JLabel();
         txtunitno = new javax.swing.JTextField();
@@ -63,8 +68,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtworkstate = new javax.swing.JTextField();
         txtworkzipcode = new javax.swing.JTextField();
         txtworkphoneno = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jLabel19 = new javax.swing.JLabel();
+        btnback = new javax.swing.JButton();
+        lblCreatePerson = new javax.swing.JLabel();
 
         txtlastname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +81,7 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         lbllastname.setText("Last Name");
 
-        lblssn.setText("SocialSecurityNumber");
+        lblsalary.setText("Salary");
 
         lblage.setText("Age");
 
@@ -103,6 +108,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblphoneno.setText("Phone Number");
 
         btncreate.setText("Create");
+        btncreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncreateActionPerformed(evt);
+            }
+        });
 
         lblworkstreetaddress.setText("Street Address");
 
@@ -122,11 +132,16 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setText("<<< Back");
+        btnback.setText("<<< Back");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Create Person");
+        lblCreatePerson.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblCreatePerson.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCreatePerson.setText("Create Person");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -136,9 +151,9 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jButton2)
+                        .addComponent(btnback)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblCreatePerson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -148,12 +163,12 @@ public class CreateJPanel extends javax.swing.JPanel {
                                         .addComponent(txtworkzipcode, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                                         .addComponent(txtworkcity, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblfirstname, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblssn, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblsalary, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblgender, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblstreetaddress, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblcity, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblzipcode, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtssn, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtsalary, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtgender, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtfirstname, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtstreetaddress, javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,19 +212,19 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jLabel19))
+                            .addComponent(btnback)
+                            .addComponent(lblCreatePerson))
                         .addGap(7, 7, 7)
                         .addComponent(lblfirstname)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblssn)
+                            .addComponent(lblsalary)
                             .addComponent(lblage))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtssn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtsalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
@@ -292,11 +307,21 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtworkphonenoActionPerformed
 
+    private void btncreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncreateActionPerformed
+       
+    }//GEN-LAST:event_btncreateActionPerformed
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        userProcessContainer.remove(this);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.previous(userProcessContainer); 
+    }//GEN-LAST:event_btnbackActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnback;
     private javax.swing.JButton btncreate;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel lblCreatePerson;
     private javax.swing.JLabel lblage;
     private javax.swing.JLabel lblcity;
     private javax.swing.JLabel lblcontactno;
@@ -304,7 +329,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblgender;
     private javax.swing.JLabel lbllastname;
     private javax.swing.JLabel lblphoneno;
-    private javax.swing.JLabel lblssn;
+    private javax.swing.JLabel lblsalary;
     private javax.swing.JLabel lblstate;
     private javax.swing.JLabel lblstreetaddress;
     private javax.swing.JLabel lblunitno;
@@ -322,7 +347,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtgender;
     private javax.swing.JTextField txtlastname;
     private javax.swing.JTextField txtphoneno;
-    private javax.swing.JTextField txtssn;
+    private javax.swing.JTextField txtsalary;
     private javax.swing.JTextField txtstate;
     private javax.swing.JTextField txtstreetaddress;
     private javax.swing.JTextField txtunitno;

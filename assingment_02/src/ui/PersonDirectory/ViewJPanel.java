@@ -41,7 +41,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblunitno = new javax.swing.JLabel();
         txtworkphoneno3 = new javax.swing.JTextField();
         txtstreetaddress = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
         lblcity = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         txtcity = new javax.swing.JTextField();
@@ -81,7 +81,7 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setText("<<< Back");
+        btnback.setText("<<< Back");
 
         lblcity.setText("City");
 
@@ -139,7 +139,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jButton2)
+                        .addComponent(btnback)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -201,7 +201,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
+                            .addComponent(btnback)
                             .addComponent(jLabel19))
                         .addGap(7, 7, 7)
                         .addComponent(lblfirstname)
@@ -300,9 +300,9 @@ public class ViewJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnback;
     private javax.swing.JButton btnsave;
     private javax.swing.JButton btnupdate;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel lblage;
     private javax.swing.JLabel lblcity;

@@ -4,6 +4,10 @@
  */
 package ui.PersonDirectory;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import model.PersonDirectory;
+
 /**
  *
  * @author aditi
@@ -13,8 +17,13 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form PersonMngAreaJPanel
      */
-    public PersonMngAreaJPanel() {
+    JPanel userProcessContainer;
+    PersonDirectory personDirectory;
+    public PersonMngAreaJPanel(JPanel container, PersonDirectory directory) {
         initComponents();
+        userProcessContainer= container;
+        personDirectory= directory;
+        
     }
 
     /**
@@ -26,27 +35,78 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
+        btnaddperson = new javax.swing.JButton();
+        btnlistname = new javax.swing.JButton();
+        txtsearch = new javax.swing.JTextField();
+        btnsearchforaddress = new javax.swing.JButton();
+
+        btnaddperson.setText("Add Person");
+        btnaddperson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddpersonActionPerformed(evt);
+            }
+        });
+
+        btnlistname.setText("List Person");
+        btnlistname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlistnameActionPerformed(evt);
+            }
+        });
+
+        txtsearch.setText("Type name or street address");
+
+        btnsearchforaddress.setText("Search for Address");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 147, Short.MAX_VALUE)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 886, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtsearch)
+                    .addComponent(btnlistname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnaddperson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnsearchforaddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(864, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addGap(99, 99, 99)
+                .addComponent(btnaddperson)
+                .addGap(27, 27, 27)
+                .addComponent(btnlistname)
+                .addGap(75, 75, 75)
+                .addComponent(txtsearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnsearchforaddress)
+                .addContainerGap(368, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnaddpersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddpersonActionPerformed
+        CreateJPanel panel= new CreateJPanel (userProcessContainer, personDirectory);  
+        userProcessContainer.add("AddPerson", panel);
+        
+        CardLayout layout= (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnaddpersonActionPerformed
+
+    private void btnlistnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlistnameActionPerformed
+        ManagePerson panel= new ManagePerson (userProcessContainer, personDirectory);  
+        userProcessContainer.add("ListPerson", panel);
+        
+        CardLayout layout= (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer); 
+    }//GEN-LAST:event_btnlistnameActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JButton btnaddperson;
+    private javax.swing.JButton btnlistname;
+    private javax.swing.JButton btnsearchforaddress;
+    private javax.swing.JTextField txtsearch;
     // End of variables declaration//GEN-END:variables
 }

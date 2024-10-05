@@ -63,11 +63,5 @@ public class Person {
     public void setContactNumber(long contactNumber) {
         this.contactNumber = contactNumber;
     }
-    private String firstName;               
-    private String lastName;                
-    private double salary;;    
-    private int age;                                     
-    private char gender;                  
-    private long contactNumber; 
     
 }

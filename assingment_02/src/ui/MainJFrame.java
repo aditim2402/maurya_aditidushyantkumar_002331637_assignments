@@ -4,16 +4,22 @@
  */
 package ui;
 
+import java.awt.CardLayout;
+import model.Person;
+import model.PersonDirectory;
+
+import ui.PersonDirectory.PersonMngAreaJPanel;
+
 /**
  *
  * @author aditi
  */
 public class MainJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainJFrame
-     */
+    private PersonDirectory personDirectory;
     public MainJFrame() {
+        this.personDirectory= new PersonDirectory();
+        generateDemoData();
         initComponents();
     }
 
@@ -26,69 +32,68 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jPanel1 = new javax.swing.JPanel();
-        btnaddperson = new javax.swing.JButton();
-        btnlistperson = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jSplitPane2 = new javax.swing.JSplitPane();
+        topJPanel = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        userProcessContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnaddperson.setText("Add Person");
+        jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        btnlistperson.setText("List Person");
+        jButton1.setBackground(new java.awt.Color(153, 204, 255));
+        jButton1.setText("Open Personal Details");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnaddperson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnlistperson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout topJPanelLayout = new javax.swing.GroupLayout(topJPanel);
+        topJPanel.setLayout(topJPanelLayout);
+        topJPanelLayout.setHorizontalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(topJPanelLayout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(668, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(btnaddperson)
-                .addGap(33, 33, 33)
-                .addComponent(btnlistperson)
-                .addContainerGap(530, Short.MAX_VALUE))
-        );
-
-        jSplitPane1.setLeftComponent(jPanel1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 956, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 729, Short.MAX_VALUE)
+        topJPanelLayout.setVerticalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topJPanelLayout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(34, 34, 34))
         );
 
-        jSplitPane1.setRightComponent(jPanel2);
+        jSplitPane2.setTopComponent(topJPanel);
+
+        userProcessContainer.setLayout(new java.awt.CardLayout());
+        jSplitPane2.setRightComponent(userProcessContainer);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(jSplitPane2)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 669, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        PersonMngAreaJPanel panel= new PersonMngAreaJPanel (userProcessContainer, personDirectory);  
+        userProcessContainer.add("PersonMngAreaJPanel", panel);
+        
+        CardLayout layout= (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,6 +124,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new MainJFrame().setVisible(true);
             }
@@ -126,10 +132,29 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnaddperson;
-    private javax.swing.JButton btnlistperson;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JSplitPane jSplitPane2;
+    private javax.swing.JPanel topJPanel;
+    private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables
+
+    private void generateDemoData() {
+        Person newPerson = personDirectory.addPerson();
+        newPerson.setFirstName("Lily");
+        newPerson.setLastName("Rose");
+        newPerson.setSalary(30000); 
+        newPerson.setAge(35); 
+        newPerson.setContactNumber(857339878);
+        newPerson.setGender('F'); 
+
+        
+        
+        Person anotherNewPerson= personDirectory.addPerson();
+        anotherNewPerson.setFirstName("Jack");
+        anotherNewPerson.setLastName("Brown");
+        anotherNewPerson.setSalary(50000);
+        anotherNewPerson.setGender('M');
+        anotherNewPerson.setAge(36);
+        anotherNewPerson.setContactNumber(857339786);
+    }
 }
