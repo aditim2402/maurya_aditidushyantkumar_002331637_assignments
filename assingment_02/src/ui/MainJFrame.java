@@ -5,9 +5,9 @@
 package ui;
 
 import java.awt.CardLayout;
+import model.Address;
 import model.Person;
 import model.PersonDirectory;
-
 import ui.PersonDirectory.PersonMngAreaJPanel;
 
 /**
@@ -139,22 +139,153 @@ public class MainJFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void generateDemoData() {
-        Person newPerson = personDirectory.addPerson();
-        newPerson.setFirstName("Lily");
-        newPerson.setLastName("Rose");
-        newPerson.setSalary(30000); 
-        newPerson.setAge(35); 
-        newPerson.setContactNumber(857339878);
-        newPerson.setGender('F'); 
+        Person newPerson1 = personDirectory.addPerson();
+        Address newHome1 = new Address();
+        Address newWork1 = new Address();
+        
+        newPerson1.setfName("Aditi");
+        newPerson1.setlName("Maurya");
+        newPerson1.setSalary(987656);
+        newPerson1.setAge(22);
+        newPerson1.setGender('F');
+        newPerson1.setHeight(5.00f);
+        
+        
+        newHome1.setStreetAddress("10 kensington st");
+        newHome1.setUnitNo(1);
+        newHome1.setCity("Boston");
+        newHome1.setState("MA");
+        newHome1.setZipCode(2119);
+        newHome1.setPhoneNo(857666907L);
+        
+        newWork1.setStreetAddress("365 Huntington");
+        newWork1.setUnitNo(2);
+        newWork1.setCity("Boston");
+        newWork1.setState("MA");
+        newWork1.setZipCode(2115);
+        newWork1.setPhoneNo(609004567L);
+        
+        newPerson1.setHomeAddress(newHome1);
+        newPerson1.setWorkAddress(newWork1);
+        
+        //Person2
+        Person newPerson2 = personDirectory.addPerson();
+        Address newHome2 = new Address();
+        Address newWork2 = new Address();
+        
+        newPerson2.setfName("Raj");
+        newPerson2.setlName("Patel");
+        newPerson2.setSalary(67893);
+        newPerson2.setAge(27);
+        newPerson2.setGender('M');
+        newPerson2.setHeight(5.08f);
+        
+        
+        newHome2.setStreetAddress("890 Pine St");
+        newHome2.setUnitNo(89);
+        newHome2.setCity("Houston");
+        newHome2.setState("TX");
+        newHome2.setZipCode(77701);
+        newHome2.setPhoneNo(85766908L);
+        
+        newWork2.setStreetAddress("102 Main St");
+        newWork2.setUnitNo(23);
+        newWork2.setCity("Boston");
+        newWork2.setState("MA");
+        newWork2.setZipCode(77002);
+        newWork2.setPhoneNo(888976532L);
+        
+        newPerson2.setHomeAddress(newHome2);
+        newPerson2.setWorkAddress(newWork2);
+        
+        // Person 3
+        Person newPerson3 = personDirectory.addPerson();
+        Address newHome3 = new Address();
+        Address newWork3 = new Address();
 
+        newPerson3.setfName("Sarah");
+        newPerson3.setlName("Lee");
+        newPerson3.setSalary(56789);
+        newPerson3.setAge(26);
+        newPerson3.setGender('F');
+        newPerson3.setHeight(5.5f);
         
+
+        newHome3.setStreetAddress("123 Cedar Ave");
+        newHome3.setUnitNo(102);
+        newHome3.setCity("Miami");
+        newHome3.setState("FL");
+        newHome3.setZipCode(33101);
+        newHome3.setPhoneNo(3467890L);
+
+        newWork3.setStreetAddress("456 Palm St");
+        newWork3.setUnitNo(55);
+        newWork3.setCity("Miami");
+        newWork3.setState("FL");
+        newWork3.setZipCode(33102);
+        newWork3.setPhoneNo(89077564L);
+
+        newPerson3.setHomeAddress(newHome3);
+        newPerson3.setWorkAddress(newWork3);
+
+        // Person 4
+        Person newPerson4 = personDirectory.addPerson();
+        Address newHome4 = new Address();
+        Address newWork4 = new Address();
+
+        newPerson4.setfName("PAnjali");
+        newPerson4.setlName("Kapoor");
+        newPerson4.setSalary(989123);
+        newPerson4.setAge(24);
+        newPerson4.setGender('F');
+        newPerson4.setHeight(5.4f);
         
-        Person anotherNewPerson= personDirectory.addPerson();
-        anotherNewPerson.setFirstName("Jack");
-        anotherNewPerson.setLastName("Brown");
-        anotherNewPerson.setSalary(50000);
-        anotherNewPerson.setGender('M');
-        anotherNewPerson.setAge(36);
-        anotherNewPerson.setContactNumber(857339786);
+
+        newHome4.setStreetAddress("456 Oak St");
+        newHome4.setUnitNo(56);
+        newHome4.setCity("San Francisco");
+        newHome4.setState("CA");
+        newHome4.setZipCode(94103);
+        newHome4.setPhoneNo(4155558765L);
+
+        newWork4.setStreetAddress("987 Birch Rd");
+        newWork4.setUnitNo(13);
+        newWork4.setCity("Dallas");
+        newWork4.setState("TX");
+        newWork4.setZipCode(75201);
+        newWork4.setPhoneNo(2145557654L);
+
+        newPerson4.setHomeAddress(newHome4);
+        newPerson4.setWorkAddress(newWork4);
+
+        // Person 5
+        Person newPerson5 = personDirectory.addPerson();
+        Address newHome5 = new Address();
+        Address newWork5 = new Address();
+
+        newPerson5.setfName("Peter");
+        newPerson5.setlName("Parker");
+        newPerson5.setSalary(654987);
+        newPerson5.setAge(25);
+        newPerson5.setGender('M');
+        newPerson5.setHeight(6.2f);
+        
+
+        newHome5.setStreetAddress("321 Elm St");
+        newHome5.setUnitNo(4);
+        newHome5.setCity("Dallas");
+        newHome5.setState("TX");
+        newHome5.setZipCode(92101);
+        newHome5.setPhoneNo(6195554321L);
+
+        newWork5.setStreetAddress("101 Elmwood Ave");
+        newWork5.setUnitNo(67);
+        newWork5.setCity("New York");
+        newWork5.setState("NY");
+        newWork5.setZipCode(10001);
+        newWork5.setPhoneNo(789643217L);
+
+        newPerson5.setHomeAddress(newHome5);
+        newPerson5.setWorkAddress(newWork5);
     }
 }

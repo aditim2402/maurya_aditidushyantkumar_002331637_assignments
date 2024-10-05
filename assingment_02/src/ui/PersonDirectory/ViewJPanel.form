@@ -26,52 +26,48 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="txtworkzipcode" alignment="0" pref="154" max="32767" attributes="0"/>
-                              <Component id="txtworkcity" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblfirstname" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblssn" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblgender" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblstreetaddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblcity" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblzipcode" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtssn" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtgender" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtfirstname" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtstreetaddress" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtcity" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtzipcode" alignment="1" max="32767" attributes="0"/>
-                              <Component id="lblworkstreetaddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtworkstreetaddress" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtworkzipcode" alignment="0" pref="154" max="32767" attributes="0"/>
+                          <Component id="txtworkcity" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblfirstname" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblsalary" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblgender" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblstreetaddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblcity" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblzipcode" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtsalary" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtfirstname" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtstreetaddress" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtcity" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtzipcode" alignment="1" max="32767" attributes="0"/>
+                          <Component id="lblworkstreetaddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtworkstreetaddress" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblworkcity" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblworkzipcode" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtgender" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="lblworkphoneno" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblworkstate" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lbllastname" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblage" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblcontactno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblunitno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblstate" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblphoneno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtstate" alignment="0" pref="158" max="32767" attributes="0"/>
-                              <Component id="txtunitno" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtcontactno" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtage" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtlastname" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtphoneno" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblworkunitno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtworkphoneno3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtworkunitno" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtworkstate" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="lbllastname" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblage" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblheight" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblunitno" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblstate" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblphoneno" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtstate" alignment="0" pref="158" max="32767" attributes="0"/>
+                          <Component id="txtunitno" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtheight" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtage" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblworkunitno" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtworkunitno" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtworkstate" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtworkphnno" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtlastname" max="32767" attributes="0"/>
+                          <Component id="txtphoneno" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="310" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -81,7 +77,7 @@
               <Component id="btnsave" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
               <Component id="btnupdate" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="432" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -98,23 +94,24 @@
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Component id="lblfirstname" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtfirstname" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtfirstname" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="txtlastname" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblssn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblsalary" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblage" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtssn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtsalary" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtage" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="lbllastname" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtlastname" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -125,9 +122,9 @@
                       <Component id="txtgender" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="lblcontactno" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblheight" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtcontactno" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtheight" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
@@ -188,7 +185,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtworkzipcode" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtworkphoneno3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtworkphnno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -215,11 +212,11 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtworkunitno">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtssn">
+    <Component class="javax.swing.JTextField" name="txtsalary">
     </Component>
     <Component class="javax.swing.JTextField" name="txtworkstreetaddress">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtcontactno">
+    <Component class="javax.swing.JTextField" name="txtheight">
     </Component>
     <Component class="javax.swing.JTextField" name="txtworkcity">
     </Component>
@@ -239,17 +236,15 @@
         <Property name="text" type="java.lang.String" value="Unit Number"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtworkphoneno3">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtworkphoneno3ActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JTextField" name="txtstreetaddress">
     </Component>
     <Component class="javax.swing.JButton" name="btnback">
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;&lt;&lt; Back"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbackActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblcity">
       <Properties>
@@ -288,13 +283,6 @@
         <Property name="text" type="java.lang.String" value="Phone Number"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtlastname">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtlastnameActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtphoneno">
-    </Component>
     <Component class="javax.swing.JLabel" name="lblfirstname">
       <Properties>
         <Property name="text" type="java.lang.String" value="First Name"/>
@@ -310,9 +298,9 @@
         <Property name="text" type="java.lang.String" value="Street Address"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblssn">
+    <Component class="javax.swing.JLabel" name="lblsalary">
       <Properties>
-        <Property name="text" type="java.lang.String" value="SocialSecurityNumber"/>
+        <Property name="text" type="java.lang.String" value="Salary"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblworkunitno">
@@ -340,25 +328,37 @@
         <Property name="text" type="java.lang.String" value="State"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblcontactno">
+    <Component class="javax.swing.JLabel" name="lblheight">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Contact Number"/>
+        <Property name="text" type="java.lang.String" value="Height"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtgender">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtgenderActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnsave">
       <Properties>
         <Property name="text" type="java.lang.String" value="Save"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnsaveActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnupdate">
       <Properties>
         <Property name="text" type="java.lang.String" value="Update"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnupdateActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtworkphnno">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtlastname">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtgender">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtphoneno">
     </Component>
   </SubComponents>
 </Form>

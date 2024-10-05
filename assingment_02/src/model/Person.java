@@ -1,43 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 /**
  *
- * @author aditi
+ * @author suhas
  */
 public class Person {
-    private String firstName;               
-    private String lastName;                
-    private double salary;;    
-    private int age;                                     
-    private char gender;                  
-    private long contactNumber; 
-    
-    public String getFirstName() {
-        return firstName;
+    private String fName;
+    private String lName;
+    private int age;
+    private char gender;
+    private float salary;
+    private double height;
+    public String getfName() {
+        return fName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setfName(String fName) {
+        this.fName = fName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getlName() {
+        return lName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setlName(String lName) {
+        this.lName = lName;
     }
 
     public int getAge() {
@@ -56,12 +43,53 @@ public class Person {
         this.gender = gender;
     }
 
-    public long getContactNumber() {
-        return contactNumber;
+    public float getSalary() {
+        return salary;
     }
 
-    public void setContactNumber(long contactNumber) {
-        this.contactNumber = contactNumber;
+    public void setSalary(float salary) {
+        this.salary = salary;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
     
+    private Address homeAddress;
+    private Address workAddress;
+
+    
+    
+    public Person(){
+        this.homeAddress = new Address();
+        this.workAddress = new Address();
+    }
+    public Address getHomeAddress() {
+        return homeAddress;
+    }
+
+    public void setHomeAddress(Address homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+    public Address getWorkAddress() {
+        return workAddress;
+    }
+
+    public void setWorkAddress(Address workAddress) {
+        this.workAddress = workAddress;
+    }
+    
+    @Override
+    public String toString() {
+        return fName;
+    }
+
+    
+    
 }
+

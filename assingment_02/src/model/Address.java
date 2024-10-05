@@ -1,124 +1,65 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package model;
 
 /**
  *
- * @author aditi
+ * @author suhas
  */
 public class Address {
-    private String homeStreetAddress;    
-    private byte homeUnitNumber;         
-    private char homeCityInitial;        
-    private float homeStateCode;         
-    private double homeZipCode;          
-    private int homePhoneNumber;         
-
-   
-    private String workStreetAddress;    
-    private short workUnitNumber;        
-    private char workCityInitial;        
-    private long workStateCode;          
-    private int workZipCode;             
-    private long workPhoneNumber;
     
-    public String getHomeStreetAddress() {
-        return homeStreetAddress;
+    private String streetAddress;
+    private int unitNo;
+    private String city;
+    private String state;
+    private int zipCode;
+    private long phoneNo;
+
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public void setHomeStreetAddress(String homeStreetAddress) {
-        this.homeStreetAddress = homeStreetAddress;
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
     }
 
-    public byte getHomeUnitNumber() {
-        return homeUnitNumber;
+    public int getUnitNo() {
+        return unitNo;
     }
 
-    public void setHomeUnitNumber(byte homeUnitNumber) {
-        this.homeUnitNumber = homeUnitNumber;
+    public void setUnitNo(int unitNo) {
+        this.unitNo = unitNo;
     }
 
-    public char getHomeCityInitial() {
-        return homeCityInitial;
+    public String getCity() {
+        return city;
     }
 
-    public void setHomeCityInitial(char homeCityInitial) {
-        this.homeCityInitial = homeCityInitial;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public float getHomeStateCode() {
-        return homeStateCode;
+    public String getState() {
+        return state;
     }
 
-    public void setHomeStateCode(float homeStateCode) {
-        this.homeStateCode = homeStateCode;
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public double getHomeZipCode() {
-        return homeZipCode;
+    public int getZipCode() {
+        return zipCode;
     }
 
-    public void setHomeZipCode(double homeZipCode) {
-        this.homeZipCode = homeZipCode;
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
     }
 
-    public int getHomePhoneNumber() {
-        return homePhoneNumber;
+    public long getPhoneNo() {
+        return phoneNo;
     }
 
-    public void setHomePhoneNumber(int homePhoneNumber) {
-        this.homePhoneNumber = homePhoneNumber;
+    public void setPhoneNo(long phoneNo) {
+        this.phoneNo = phoneNo;
     }
-
-    public String getWorkStreetAddress() {
-        return workStreetAddress;
-    }
-
-    public void setWorkStreetAddress(String workStreetAddress) {
-        this.workStreetAddress = workStreetAddress;
-    }
-
-    public short getWorkUnitNumber() {
-        return workUnitNumber;
-    }
-
-    public void setWorkUnitNumber(short workUnitNumber) {
-        this.workUnitNumber = workUnitNumber;
-    }
-
-    public char getWorkCityInitial() {
-        return workCityInitial;
-    }
-
-    public void setWorkCityInitial(char workCityInitial) {
-        this.workCityInitial = workCityInitial;
-    }
-
-    public long getWorkStateCode() {
-        return workStateCode;
-    }
-
-    public void setWorkStateCode(long workStateCode) {
-        this.workStateCode = workStateCode;
-    }
-
-    public int getWorkZipCode() {
-        return workZipCode;
-    }
-
-    public void setWorkZipCode(int workZipCode) {
-        this.workZipCode = workZipCode;
-    }
-
-    public long getWorkPhoneNumber() {
-        return workPhoneNumber;
-    }
-
-    public void setWorkPhoneNumber(long workPhoneNumber) {
-        this.workPhoneNumber = workPhoneNumber;
-    }
-    
     
 }
