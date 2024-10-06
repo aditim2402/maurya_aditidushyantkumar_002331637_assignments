@@ -38,7 +38,6 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
         btnaddperson = new javax.swing.JButton();
         btnlistname = new javax.swing.JButton();
 
-        btnaddperson.setBackground(new java.awt.Color(255, 153, 153));
         btnaddperson.setText("Add Person");
         btnaddperson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,7 +45,6 @@ public class PersonMngAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnlistname.setBackground(new java.awt.Color(255, 153, 153));
         btnlistname.setText("List Person");
         btnlistname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -21,7 +21,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="tblperson" alignment="0" pref="1286" max="32767" attributes="0"/>
+          <Component id="tblperson" alignment="0" pref="1042" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -60,7 +60,7 @@
               <Component id="btnview" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btndelete" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="65" max="32767" attributes="0"/>
+              <EmptySpace pref="154" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -152,9 +152,6 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnsearch">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Search"/>
       </Properties>
       <Events>
@@ -163,9 +160,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnview">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="View"/>
       </Properties>
       <Events>
@@ -174,9 +168,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="btndelete">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>
@@ -187,9 +178,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnback">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;Back"/>
       </Properties>
       <Events>

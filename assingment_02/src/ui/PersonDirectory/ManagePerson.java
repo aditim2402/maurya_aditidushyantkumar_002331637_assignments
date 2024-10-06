@@ -60,7 +60,6 @@ public class ManagePerson extends javax.swing.JPanel {
         ));
         tblperson.setViewportView(tblProfile);
 
-        btnsearch.setBackground(new java.awt.Color(255, 153, 153));
         btnsearch.setText("Search");
         btnsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +67,6 @@ public class ManagePerson extends javax.swing.JPanel {
             }
         });
 
-        btnview.setBackground(new java.awt.Color(255, 153, 153));
         btnview.setText("View");
         btnview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +74,6 @@ public class ManagePerson extends javax.swing.JPanel {
             }
         });
 
-        btndelete.setBackground(new java.awt.Color(255, 153, 153));
         btndelete.setText("Delete");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +81,6 @@ public class ManagePerson extends javax.swing.JPanel {
             }
         });
 
-        btnback.setBackground(new java.awt.Color(255, 153, 153));
         btnback.setText("<<<Back");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +96,7 @@ public class ManagePerson extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tblperson, javax.swing.GroupLayout.DEFAULT_SIZE, 1286, Short.MAX_VALUE)
+            .addComponent(tblperson, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -133,7 +129,7 @@ public class ManagePerson extends javax.swing.JPanel {
                 .addComponent(btnview)
                 .addGap(18, 18, 18)
                 .addComponent(btndelete)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -45,7 +45,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
         topJPanel.setBackground(new java.awt.Color(255, 255, 204));
-        topJPanel.setLayout(new java.awt.GridBagLayout());
 
         btnopendetails.setBackground(new java.awt.Color(204, 255, 255));
         btnopendetails.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -56,7 +55,23 @@ public class MainJFrame extends javax.swing.JFrame {
                 btnopendetailsActionPerformed(evt);
             }
         });
-        topJPanel.add(btnopendetails, new java.awt.GridBagConstraints());
+
+        javax.swing.GroupLayout topJPanelLayout = new javax.swing.GroupLayout(topJPanel);
+        topJPanel.setLayout(topJPanelLayout);
+        topJPanelLayout.setHorizontalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(topJPanelLayout.createSequentialGroup()
+                .addGap(176, 176, 176)
+                .addComponent(btnopendetails)
+                .addContainerGap(713, Short.MAX_VALUE))
+        );
+        topJPanelLayout.setVerticalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topJPanelLayout.createSequentialGroup()
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(btnopendetails)
+                .addGap(29, 29, 29))
+        );
 
         jSplitPane2.setTopComponent(topJPanel);
 
@@ -76,7 +91,9 @@ public class MainJFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 669, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 669, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
