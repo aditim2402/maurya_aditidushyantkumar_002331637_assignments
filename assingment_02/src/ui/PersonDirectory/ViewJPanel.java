@@ -88,6 +88,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         setForeground(new java.awt.Color(255, 255, 204));
         setLayout(null);
 
+        btnback.setBackground(new java.awt.Color(255, 153, 153));
         btnback.setText("<<< Back");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +98,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         add(btnback);
         btnback.setBounds(31, 31, 82, 23);
 
+        btnsave.setBackground(new java.awt.Color(255, 153, 153));
         btnsave.setText("Save");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +108,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         add(btnsave);
         btnsave.setBounds(540, 460, 72, 23);
 
+        btnupdate.setBackground(new java.awt.Color(255, 153, 153));
         btnupdate.setText("Update");
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -566,9 +569,6 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtunitno;
     private javax.swing.JTextField txtworkcity;
     private javax.swing.JTextField txtworkphnno;
-    private javax.swing.JTextField txtworkphoneno;
-    private javax.swing.JTextField txtworkphoneno1;
-    private javax.swing.JTextField txtworkphoneno2;
     private javax.swing.JTextField txtworkstate;
     private javax.swing.JTextField txtworkstreetaddress;
     private javax.swing.JTextField txtworkunitno;

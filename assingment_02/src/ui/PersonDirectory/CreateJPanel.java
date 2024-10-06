@@ -37,19 +37,19 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblCreatePerson = new javax.swing.JLabel();
         btncreate = new javax.swing.JButton();
         btnback = new javax.swing.JButton();
-        PersonDetails = new javax.swing.JPanel();
-        lblfirstname = new javax.swing.JLabel();
-        txtfirstname = new javax.swing.JTextField();
-        lbllastname = new javax.swing.JLabel();
-        txtlastname = new javax.swing.JTextField();
-        lblsalary = new javax.swing.JLabel();
-        txtsalary = new javax.swing.JTextField();
-        lblgender = new javax.swing.JLabel();
-        txtgender = new javax.swing.JTextField();
-        lblage = new javax.swing.JLabel();
-        txtage = new javax.swing.JTextField();
-        lblheight = new javax.swing.JLabel();
-        txtheight = new javax.swing.JTextField();
+        PersonDetails4 = new javax.swing.JPanel();
+        lblfirstname4 = new javax.swing.JLabel();
+        txtfirstname4 = new javax.swing.JTextField();
+        lbllastname4 = new javax.swing.JLabel();
+        lblsalary4 = new javax.swing.JLabel();
+        txtsalary4 = new javax.swing.JTextField();
+        lblgender4 = new javax.swing.JLabel();
+        txtgender4 = new javax.swing.JTextField();
+        lblage4 = new javax.swing.JLabel();
+        txtage4 = new javax.swing.JTextField();
+        lblheight4 = new javax.swing.JLabel();
+        txtheight4 = new javax.swing.JTextField();
+        txtlastname4 = new javax.swing.JTextField();
         PersonHomeAddress = new javax.swing.JPanel();
         lblstreetaddress = new javax.swing.JLabel();
         txtstreetaddress = new javax.swing.JTextField();
@@ -85,6 +85,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 204));
         setLayout(null);
 
+        btncreate.setBackground(new java.awt.Color(255, 153, 153));
         btncreate.setText("Create");
         btncreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,8 +93,9 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
         add(btncreate);
-        btncreate.setBounds(510, 490, 72, 23);
+        btncreate.setBounds(510, 500, 72, 23);
 
+        btnback.setBackground(new java.awt.Color(255, 153, 153));
         btnback.setText("<<< Back");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,95 +105,93 @@ public class CreateJPanel extends javax.swing.JPanel {
         add(btnback);
         btnback.setBounds(16, 7, 82, 23);
 
-        PersonDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Person Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 10))); // NOI18N
-        PersonDetails.setForeground(new java.awt.Color(255, 255, 102));
+        PersonDetails4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Person Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 10))); // NOI18N
+        PersonDetails4.setForeground(new java.awt.Color(255, 255, 102));
 
-        lblfirstname.setText("First Name");
+        lblfirstname4.setText("First Name");
 
-        lbllastname.setText("Last Name");
+        lbllastname4.setText("Last Name");
 
-        lblsalary.setText("Salary");
+        lblsalary4.setText("Salary");
 
-        lblgender.setText("Gender");
+        lblgender4.setText("Gender");
 
-        lblage.setText("Age");
+        lblage4.setText("Age");
 
-        lblheight.setText("Height");
+        lblheight4.setText("Height");
 
-        javax.swing.GroupLayout PersonDetailsLayout = new javax.swing.GroupLayout(PersonDetails);
-        PersonDetails.setLayout(PersonDetailsLayout);
-        PersonDetailsLayout.setHorizontalGroup(
-            PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PersonDetailsLayout.createSequentialGroup()
+        javax.swing.GroupLayout PersonDetails4Layout = new javax.swing.GroupLayout(PersonDetails4);
+        PersonDetails4.setLayout(PersonDetails4Layout);
+        PersonDetails4Layout.setHorizontalGroup(
+            PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PersonDetails4Layout.createSequentialGroup()
                 .addGap(119, 119, 119)
-                .addComponent(lblfirstname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(186, 186, 186)
-                .addComponent(lbllastname)
+                .addComponent(lblfirstname4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbllastname4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblsalary)
+                .addComponent(lblsalary4)
                 .addGap(99, 99, 99))
-            .addGroup(PersonDetailsLayout.createSequentialGroup()
-                .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PersonDetailsLayout.createSequentialGroup()
+            .addGroup(PersonDetails4Layout.createSequentialGroup()
+                .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PersonDetails4Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
-                        .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtfirstname, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
-                            .addComponent(txtgender)))
-                    .addGroup(PersonDetailsLayout.createSequentialGroup()
+                        .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtfirstname4, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                            .addComponent(txtgender4)))
+                    .addGroup(PersonDetails4Layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addComponent(lblgender, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(PersonDetailsLayout.createSequentialGroup()
-                            .addGap(124, 124, 124)
-                            .addComponent(lblage))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PersonDetailsLayout.createSequentialGroup()
-                            .addGap(50, 50, 50)
-                            .addComponent(txtage, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(PersonDetailsLayout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(txtlastname, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PersonDetailsLayout.createSequentialGroup()
-                        .addComponent(lblheight)
+                        .addComponent(lblgender4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PersonDetails4Layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addComponent(lblage4))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PersonDetails4Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtage4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(txtlastname4))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PersonDetails4Layout.createSequentialGroup()
+                        .addComponent(lblheight4)
                         .addGap(92, 92, 92))
-                    .addGroup(PersonDetailsLayout.createSequentialGroup()
-                        .addComponent(txtsalary, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PersonDetails4Layout.createSequentialGroup()
+                        .addComponent(txtsalary4, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PersonDetailsLayout.createSequentialGroup()
-                        .addComponent(txtheight, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PersonDetails4Layout.createSequentialGroup()
+                        .addComponent(txtheight4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
-        PersonDetailsLayout.setVerticalGroup(
-            PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PersonDetailsLayout.createSequentialGroup()
+        PersonDetails4Layout.setVerticalGroup(
+            PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PersonDetails4Layout.createSequentialGroup()
                 .addContainerGap(17, Short.MAX_VALUE)
-                .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblfirstname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbllastname)
-                    .addComponent(lblsalary))
+                .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblfirstname4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbllastname4)
+                    .addComponent(lblsalary4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtsalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtlastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtfirstname4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtsalary4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtlastname4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
-                .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblage)
-                    .addComponent(lblheight)
-                    .addComponent(lblgender))
+                .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblage4)
+                    .addComponent(lblheight4)
+                    .addComponent(lblgender4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PersonDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtheight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtgender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(PersonDetails4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtage4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtheight4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtgender4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15))
         );
 
-        add(PersonDetails);
-        PersonDetails.setBounds(170, 10, 780, 150);
-        PersonDetails.getAccessibleContext().setAccessibleName("");
+        add(PersonDetails4);
+        PersonDetails4.setBounds(170, 10, 780, 150);
+        PersonDetails4.getAccessibleContext().setAccessibleName("");
 
         PersonHomeAddress.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Home Address", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 10))); // NOI18N
 
@@ -376,6 +376,12 @@ public class CreateJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(40, 210, 50, 16);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnbackActionPerformed
+
     private void btncreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncreateActionPerformed
         int age;
         int unitNo;
@@ -387,10 +393,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         float salary;
         long phoneNo;
         long phoneNoWA;
-        
+
         Address homeAddress = new Address();
         Address workAddress = new Address();
-        
+
         String fName = txtfirstname.getText();
         String lName = txtlastname.getText();
         String streetAddressHome = txtstreetaddress.getText();
@@ -399,30 +405,28 @@ public class CreateJPanel extends javax.swing.JPanel {
         String cityWork = txtworkcity.getText();
         String stateHome = txtstate.getText();
         String stateWork = txtworkstate.getText();
-        
+
         //Null validations for attributes
-        
+
         if (fName.isBlank() || lName.isBlank() || cityHome.isBlank() || cityWork.isBlank() || stateHome.isBlank() || stateWork.isBlank())
         {
-           JOptionPane.showMessageDialog (this,"All fields are mandatory.","Error", JOptionPane.ERROR_MESSAGE);
-           return;
+            JOptionPane.showMessageDialog (this,"All fields are mandatory.","Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
-        
-   
-        
+
         try {
             age = Integer.parseInt(txtage.getText());
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Please check the Age input.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         try {
             salary = Float.parseFloat(txtsalary.getText().trim());
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Please check the Salary input. It should be a valid decimal number.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
-}
+        }
 
         try {
             String genderStr = txtgender.getText();
@@ -434,7 +438,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please check the Gender input.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         try {
             height = Float.parseFloat(txtheight.getText());
         } catch (NumberFormatException e) {
@@ -442,63 +446,62 @@ public class CreateJPanel extends javax.swing.JPanel {
             return;
         }
 
-        
         try {
             unitNo = Integer.parseInt(txtunitno.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Please check the Home Unit No. input.","Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         try {
             unitNoWA = Integer.parseInt(txtworkunitno.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Please check the Work Unit No. input.","Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         try {
             zipCode = Integer.parseInt(txtzipcode.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Please check the Home Zip Code input.","Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         try {
             zipCodeWA = Integer.parseInt(txtworkzipcode.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Please check the Work Zip Code input.","Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         try {
             phoneNo = Long.parseLong(txtphoneno.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Please check the Home Phone No. input.","Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         try {
             phoneNoWA = Long.parseLong(txtworkphnno.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Please check the Work Phone No. input.","Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         homeAddress.setStreetAddress(streetAddressHome);
         homeAddress.setUnitNo(unitNo);
         homeAddress.setCity(cityHome);
         homeAddress.setState(stateHome);
         homeAddress.setZipCode(zipCode);
         homeAddress.setPhoneNo(phoneNo);
-        
+
         workAddress.setStreetAddress(streetAddressWork);
         workAddress.setUnitNo(unitNoWA);
         workAddress.setCity(cityWork);
         workAddress.setState(stateWork);
         workAddress.setZipCode(zipCodeWA);
         workAddress.setPhoneNo(phoneNoWA);
-        
+
         Person p = personDirectory.addPerson();
         p.setfName(fName);
         p.setlName(lName);
@@ -508,9 +511,9 @@ public class CreateJPanel extends javax.swing.JPanel {
         p.setHeight(height);
         p.setHomeAddress(homeAddress);
         p.setWorkAddress(workAddress);
-        
+
         JOptionPane.showMessageDialog(this, "Account successfully created.", "Information", JOptionPane.INFORMATION_MESSAGE);
-        
+
         txtfirstname.setText("");
         txtlastname.setText("");
         txtsalary.setText("");
@@ -529,19 +532,16 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtworkstate.setText("");
         txtworkzipcode.setText("");
         txtworkphnno.setText("");
-       
 
     }//GEN-LAST:event_btncreateActionPerformed
-
-    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnbackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PersonDetails;
+    private javax.swing.JPanel PersonDetails1;
+    private javax.swing.JPanel PersonDetails2;
+    private javax.swing.JPanel PersonDetails3;
+    private javax.swing.JPanel PersonDetails4;
     private javax.swing.JPanel PersonHomeAddress;
     private javax.swing.JPanel PersonWorkAddress;
     private javax.swing.JButton btnback;
@@ -550,13 +550,37 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblCreatePerson;
     private javax.swing.JLabel lblage;
+    private javax.swing.JLabel lblage1;
+    private javax.swing.JLabel lblage2;
+    private javax.swing.JLabel lblage3;
+    private javax.swing.JLabel lblage4;
     private javax.swing.JLabel lblcity;
     private javax.swing.JLabel lblfirstname;
+    private javax.swing.JLabel lblfirstname1;
+    private javax.swing.JLabel lblfirstname2;
+    private javax.swing.JLabel lblfirstname3;
+    private javax.swing.JLabel lblfirstname4;
     private javax.swing.JLabel lblgender;
+    private javax.swing.JLabel lblgender1;
+    private javax.swing.JLabel lblgender2;
+    private javax.swing.JLabel lblgender3;
+    private javax.swing.JLabel lblgender4;
     private javax.swing.JLabel lblheight;
+    private javax.swing.JLabel lblheight1;
+    private javax.swing.JLabel lblheight2;
+    private javax.swing.JLabel lblheight3;
+    private javax.swing.JLabel lblheight4;
     private javax.swing.JLabel lbllastname;
+    private javax.swing.JLabel lbllastname1;
+    private javax.swing.JLabel lbllastname2;
+    private javax.swing.JLabel lbllastname3;
+    private javax.swing.JLabel lbllastname4;
     private javax.swing.JLabel lblphoneno;
     private javax.swing.JLabel lblsalary;
+    private javax.swing.JLabel lblsalary1;
+    private javax.swing.JLabel lblsalary2;
+    private javax.swing.JLabel lblsalary3;
+    private javax.swing.JLabel lblsalary4;
     private javax.swing.JLabel lblstate;
     private javax.swing.JLabel lblstreetaddress;
     private javax.swing.JLabel lblunitno;
@@ -568,13 +592,37 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblworkzipcode;
     private javax.swing.JLabel lblzipcode;
     private javax.swing.JTextField txtage;
+    private javax.swing.JTextField txtage1;
+    private javax.swing.JTextField txtage2;
+    private javax.swing.JTextField txtage3;
+    private javax.swing.JTextField txtage4;
     private javax.swing.JTextField txtcity;
     private javax.swing.JTextField txtfirstname;
+    private javax.swing.JTextField txtfirstname1;
+    private javax.swing.JTextField txtfirstname2;
+    private javax.swing.JTextField txtfirstname3;
+    private javax.swing.JTextField txtfirstname4;
     private javax.swing.JTextField txtgender;
+    private javax.swing.JTextField txtgender1;
+    private javax.swing.JTextField txtgender2;
+    private javax.swing.JTextField txtgender3;
+    private javax.swing.JTextField txtgender4;
     private javax.swing.JTextField txtheight;
+    private javax.swing.JTextField txtheight1;
+    private javax.swing.JTextField txtheight2;
+    private javax.swing.JTextField txtheight3;
+    private javax.swing.JTextField txtheight4;
     private javax.swing.JTextField txtlastname;
+    private javax.swing.JTextField txtlastname1;
+    private javax.swing.JTextField txtlastname2;
+    private javax.swing.JTextField txtlastname3;
+    private javax.swing.JTextField txtlastname4;
     private javax.swing.JTextField txtphoneno;
     private javax.swing.JTextField txtsalary;
+    private javax.swing.JTextField txtsalary1;
+    private javax.swing.JTextField txtsalary2;
+    private javax.swing.JTextField txtsalary3;
+    private javax.swing.JTextField txtsalary4;
     private javax.swing.JTextField txtstate;
     private javax.swing.JTextField txtstreetaddress;
     private javax.swing.JTextField txtunitno;
