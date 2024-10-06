@@ -10,6 +10,8 @@ import model.Person;
 import model.PersonDirectory;
 import ui.PersonDirectory.PersonMngAreaJPanel;
 
+
+
 /**
  *
  * @author aditi
@@ -34,18 +36,23 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane2 = new javax.swing.JSplitPane();
         topJPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnopendetails = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setText("Open Personal Details");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        topJPanel.setBackground(new java.awt.Color(255, 255, 204));
+
+        btnopendetails.setBackground(new java.awt.Color(204, 255, 255));
+        btnopendetails.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnopendetails.setForeground(new java.awt.Color(51, 51, 51));
+        btnopendetails.setText("Open Person Details");
+        btnopendetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnopendetailsActionPerformed(evt);
             }
         });
 
@@ -54,21 +61,26 @@ public class MainJFrame extends javax.swing.JFrame {
         topJPanelLayout.setHorizontalGroup(
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topJPanelLayout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(668, Short.MAX_VALUE))
+                .addGap(176, 176, 176)
+                .addComponent(btnopendetails)
+                .addContainerGap(713, Short.MAX_VALUE))
         );
         topJPanelLayout.setVerticalGroup(
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topJPanelLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(34, 34, 34))
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(btnopendetails)
+                .addGap(29, 29, 29))
         );
 
         jSplitPane2.setTopComponent(topJPanel);
 
+        userProcessContainer.setBackground(new java.awt.Color(255, 153, 153));
         userProcessContainer.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\aditi\\Downloads\\image.jpg")); // NOI18N
+        userProcessContainer.add(jLabel1, "card2");
+
         jSplitPane2.setRightComponent(userProcessContainer);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -81,19 +93,19 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 669, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        PersonMngAreaJPanel panel= new PersonMngAreaJPanel (userProcessContainer, personDirectory);  
+    private void btnopendetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnopendetailsActionPerformed
+        PersonMngAreaJPanel panel = new PersonMngAreaJPanel(userProcessContainer, personDirectory);
         userProcessContainer.add("PersonMngAreaJPanel", panel);
         
-        CardLayout layout= (CardLayout) userProcessContainer.getLayout();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnopendetailsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,7 +144,8 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnopendetails;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JPanel topJPanel;
     private javax.swing.JPanel userProcessContainer;

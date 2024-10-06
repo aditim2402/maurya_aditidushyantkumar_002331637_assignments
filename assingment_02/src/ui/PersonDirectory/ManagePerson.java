@@ -45,15 +45,17 @@ public class ManagePerson extends javax.swing.JPanel {
         btnback = new javax.swing.JButton();
         lblManagePersonDetails = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 204));
+
         tblProfile.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Home City", "Home ZipCode", "Work City", "WorK Zipcode"
+                "First Name", "Last Name", "Salary", "Age", "Gender", "Height", "Home City", "Home ZipCode", "Work City", "Work ZipCode"
             }
         ));
         tblperson.setViewportView(tblProfile);
@@ -217,10 +219,14 @@ public class ManagePerson extends javax.swing.JPanel {
             
             row[0] = a;  
             row[1] = a.getlName(); 
-            row[2] = a.getHomeAddress().getCity();        
-            row[3] = a.getHomeAddress().getZipCode();
-            row[4]=a.getWorkAddress().getCity();
-            row[5] = a.getWorkAddress().getZipCode();   
+            row[2]=a.getSalary();
+            row[3]=a.getAge();
+            row[4]=a.getGender();
+            row[5]=a.getHeight();
+            row[6] = a.getHomeAddress().getCity();        
+            row[7] = a.getHomeAddress().getZipCode();
+            row[8]=a.getWorkAddress().getCity();
+            row[9] = a.getWorkAddress().getZipCode();   
 
             model.addRow(row);  // Add the updated row to the table
 }
