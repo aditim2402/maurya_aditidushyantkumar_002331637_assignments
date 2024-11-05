@@ -57,7 +57,7 @@ public class Info5001UniversityExample {
         Course course4 = coursecatalog.newCourse("Career Management for Engineers", "ENCP6000", 1);
         Course course5 = coursecatalog.newCourse("Data Science Engineering Methods and Tools", "6105", 4);
         Course course6 = coursecatalog.newCourse("Web Design and User Experience Engineering", "6150", 4);
-        Course course7 = coursecatalog.newCourse("Cybersecurity Basics", "CYBR5200", 3);
+        Course course7 = coursecatalog.newCourse("Business analytics and Info Engineering", "info 6215", 4);
 
 
 
@@ -71,7 +71,7 @@ public class Info5001UniversityExample {
         CourseOffer courseoffer3 = courseschedule2.newCourseOffer("DAMG6210");
         CourseOffer courseoffer4 = courseschedule2.newCourseOffer("6150");
         CourseOffer courseoffer5 = courseschedule2.newCourseOffer("6105");
-        CourseOffer courseoffer6 = courseschedule2.newCourseOffer("CYBR5200");
+        CourseOffer courseoffer6 = courseschedule2.newCourseOffer("info 6215");
 
 
 
@@ -92,8 +92,8 @@ public class Info5001UniversityExample {
 
         Person person1 = persondirectory.newPerson("01123022"); //person for teacher role                  
         Person person2 = persondirectory.newPerson("011230222"); 
-        Person person3 = persondirectory.newPerson("01123024");
-        Person person6 = persondirectory.newPerson("01123025");
+        Person person3 = persondirectory.newPerson("011230119");
+        Person person6 = persondirectory.newPerson("011230289");
 
         FacultyDirectory facultydirectory = department.getFacultyDirectory();
         FacultyProfile teacher = facultydirectory.newFacultyProfile(person1);
@@ -109,7 +109,11 @@ public class Info5001UniversityExample {
     //  Create student     
  
         Person person4 = persondirectory.newPerson("0112303");  
-        Person person5 = persondirectory.newPerson("01123034");   
+        Person person5 = persondirectory.newPerson("01123034"); 
+        Person person7 = persondirectory.newPerson("0112308");  
+        Person person8 = persondirectory.newPerson("01123039"); 
+        Person person9 = persondirectory.newPerson("0112309");  
+        Person person10 = persondirectory.newPerson("01123038");   
         
         StudentDirectory sd = department.getStudentDirectory();
         StudentProfile student = sd.newStudentProfile(person3); 
