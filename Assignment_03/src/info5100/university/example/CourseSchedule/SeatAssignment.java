@@ -17,19 +17,47 @@ import info5100.university.example.CourseCatalog.Course;
  * @author kal bugrara
  */
 public class SeatAssignment {
-    public String grade="F"; // Stores letter grade (e.g., A, A-, B+)
-    
+    public float grade; // Stores letter grade (e.g., A, A-, B+)
+
+   
+
     // Returns the numeric grade based on letter grade mappings
+    
     public float getGrade() {
-        switch (this.grade) {
-            case "A": return 4.0f;
-            case "A-": return 3.7f;
-            case "B+": return 3.3f;
-            case "B": return 3.0f;
-            case "C": return 2.0f;
-            case "D": return 1.0f;
-            case "F": return 0.0f;
-            default: return 0.0f;
+        return grade;
+    }
+
+    public void setGrade(float grade) {
+        this.grade = grade;
+    }
+
+    public void setSeat(Seat seat) {
+        this.seat = seat;
+    }
+    /**
+     * @return
+     */
+    public String getLetterGrade() {
+        if (grade >= 4.0) {
+            return "A";
+        } else if (grade >= 3.7) {
+            return "A-";
+        } else if (grade >= 3.3) {
+            return "B+";
+        } else if (grade >= 3.0) {
+            return "B";
+        } else if (grade >= 2.7) {
+            return "B-";
+        } else if (grade >= 2.3) {
+            return "C+";
+        } else if (grade >= 2.0) {
+            return "C";
+        } else if (grade >= 1.7) {
+            return "C-";
+        } else if (grade >= 1.0) {
+            return "D";
+        } else {
+            return "F";
         }
     }
 
