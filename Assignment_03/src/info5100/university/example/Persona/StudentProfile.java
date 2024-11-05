@@ -17,6 +17,10 @@ import java.util.ArrayList;
 public class StudentProfile {
 
     Person person;
+    public Person getPerson() {
+        return person;
+    }
+
     Transcript transcript;
     EmploymentHistroy employmenthistory;
 

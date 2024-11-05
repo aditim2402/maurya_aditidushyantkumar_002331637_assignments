@@ -17,11 +17,16 @@ public class StudentDirectory {
     Department department;
     ArrayList<StudentProfile> studentlist;
 
+    
+
     public StudentDirectory(Department d) {
 
         department = d;
         studentlist = new ArrayList();
 
+    }
+    public ArrayList<StudentProfile> getStudentlist() {
+        return studentlist;
     }
 
     public StudentProfile newStudentProfile(Person p) {
@@ -41,5 +46,12 @@ public class StudentDirectory {
         }
             return null; //not found after going through the whole list
          }
+         public void printStudentList() {
+            System.out.println("List of Students:");
+            for (StudentProfile student : studentlist) {
+                System.out.println("Student ID: " + student.getPerson().getPersonId());
+            }
+        }
+        
     
 }

@@ -5,8 +5,8 @@
  */
 package info5100.university.example.Persona.Faculty;
 
-import info5100.university.example.Persona.*;
 import info5100.university.example.CourseSchedule.CourseOffer;
+import info5100.university.example.Persona.*;
 import java.util.ArrayList;
 
 /**
@@ -16,6 +16,10 @@ import java.util.ArrayList;
 public class FacultyProfile {
 
     Person person;
+    public Person getPerson() {
+        return person;
+    }
+
     ArrayList <FacultyAssignment> facultyassignments; //all classes taught by this professor
     
     public FacultyProfile(Person p) {

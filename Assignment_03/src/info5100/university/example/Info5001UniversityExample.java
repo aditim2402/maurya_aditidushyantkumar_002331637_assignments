@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package info5100.university.example;
 
 import info5100.university.example.CourseCatalog.Course;
@@ -10,6 +5,7 @@ import info5100.university.example.CourseCatalog.CourseCatalog;
 import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.CourseOffer;
 import info5100.university.example.CourseSchedule.CourseSchedule;
+import info5100.university.example.CourseSchedule.SeatAssignment;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
@@ -18,169 +14,121 @@ import info5100.university.example.Persona.PersonDirectory;
 import info5100.university.example.Persona.StudentDirectory;
 import info5100.university.example.Persona.StudentProfile;
 
-/**
- *
- * @author kal bugrara
- */
 public class Info5001UniversityExample {
 
-    /**
-     * @param args the command line arguments
-     */
-    
-    /* 1) Create Department make sure to pass the name of the department
-       2) Use the person directory to create persons some will play students role, some will play faculty role, etc
-       3) Use the Course Catalog to creat some courses
-       4) Create a course schedule for a semester (ex: spring 2025
-       5) Use the course schedule to create some classes (course offer)
-       6) Search for a person by ssn and assign as faculty (faculty profile)
-       7) Search for person and assign as student (student profile)
-       8) Register student for scheduled classes
-    
-    
-    
-    */
+    public static final int CREDIT_HOUR_TUITION_FEE = 500;
+
     public static void main(String[] args) {
-        // TODO code application logic here
-        
         Department department = new Department("Information Systems");
-        // we need the persondirectory to create persons for the different roles
+
+        // Person Directory
+        PersonDirectory personDirectory = department.getPersonDirectory();
+        StudentDirectory studentDirectory = department.getStudentDirectory();
         
-        PersonDirectory persondirectory = department.getPersonDirectory();
-        
-//      Create course and keep it in the course catalog
-        
-        CourseCatalog coursecatalog = department.getCourseCatalog();        
-        Course course = coursecatalog.newCourse("algorithms", "info 6205", 4);
-        Course course2 = coursecatalog.newCourse("App Engineering", "info 5100", 4);
-        Course course3 = coursecatalog.newCourse("Data Mgt and Database Design", "DAMG6210", 4);
-        Course course4 = coursecatalog.newCourse("Career Management for Engineers", "ENCP6000", 1);
-        Course course5 = coursecatalog.newCourse("Data Science Engineering Methods and Tools", "6105", 4);
-        Course course6 = coursecatalog.newCourse("Web Design and User Experience Engineering", "6150", 4);
-        Course course7 = coursecatalog.newCourse("Business analytics and Info Engineering", "info 6215", 4);
-        Course course8 = coursecatalog.newCourse("Robotics Engineering", " 6210", 4);
-        Course course9 = coursecatalog.newCourse("Health Informatics",  "DAMG6115", 4);
-        Course course10 = coursecatalog.newCourse("Project Mangement", "info 6315", 4);
+        // Course Catalog Setup
+        CourseCatalog courseCatalog = department.getCourseCatalog();
+        Course coreCourse = courseCatalog.newCourse("Algorithms", "INFO6205", 4);
+        Course elective1 = courseCatalog.newCourse("App Engineering", "INFO5100", 4);
+        Course elective2 = courseCatalog.newCourse("Data Management and Database Design", "DAMG6210", 4);
+        Course elective3 = courseCatalog.newCourse("Career Management for Engineers", "ENCP6000", 1);
+        Course elective4 = courseCatalog.newCourse("Data Science Engineering Methods", "INFO6105", 4);
+        Course elective5 = courseCatalog.newCourse("Business Analytics", "INFO6215", 4);
 
-//      now lets schedule class to run for spring 2024        
-        CourseSchedule courseschedule = department.newCourseSchedule("Spring 2024");
-        CourseSchedule courseschedule2 = department.newCourseSchedule("Fall 2024");
+        // Course Schedule for Spring 2024
+        CourseSchedule spring2024 = department.newCourseSchedule("Spring 2024");
 
+        CourseOffer coreOffer = spring2024.newCourseOffer("INFO6205");
+        CourseOffer electiveOffer1 = spring2024.newCourseOffer("INFO5100");
+        CourseOffer electiveOffer2 = spring2024.newCourseOffer("DAMG6210");
+        CourseOffer electiveOffer3 = spring2024.newCourseOffer("ENCP6000");
+        CourseOffer electiveOffer4 = spring2024.newCourseOffer("INFO6105");
+        CourseOffer electiveOffer5 = spring2024.newCourseOffer("INFO6215");
 
-        CourseOffer courseoffer = courseschedule.newCourseOffer("info 6205");
-        CourseOffer courseoffer2 = courseschedule.newCourseOffer("info 5100");
-        CourseOffer courseoffer3 = courseschedule2.newCourseOffer("DAMG6210");
-        CourseOffer courseoffer4 = courseschedule2.newCourseOffer("ENCP6000");
-        CourseOffer courseoffer5 = courseschedule2.newCourseOffer("6105");
-        CourseOffer courseoffer6 = courseschedule2.newCourseOffer("6150");
-        CourseOffer courseoffer7 = courseschedule2.newCourseOffer("info 6215");
-        CourseOffer courseoffer8 = courseschedule2.newCourseOffer("6210");
-        CourseOffer courseoffer9 = courseschedule2.newCourseOffer("DAMG6115");
-        CourseOffer courseoffer10 = courseschedule2.newCourseOffer("info 6315");
+        coreOffer.generatSeats(30);
+        electiveOffer1.generatSeats(30);
+        electiveOffer2.generatSeats(30);
+        electiveOffer3.generatSeats(30);
+        electiveOffer4.generatSeats(30);
+        electiveOffer5.generatSeats(30);
 
+        // Create Faculty Members and Assign to Courses
+        FacultyDirectory facultyDirectory = department.getFacultyDirectory();
+        FacultyProfile professor1 = facultyDirectory.newFacultyProfile(personDirectory.newPerson("01123001"));
+        FacultyProfile professor2 = facultyDirectory.newFacultyProfile(personDirectory.newPerson("01123002"));
+        FacultyProfile professor3 = facultyDirectory.newFacultyProfile(personDirectory.newPerson("01123003"));
+        FacultyProfile professor4 = facultyDirectory.newFacultyProfile(personDirectory.newPerson("01123004"));
+        FacultyProfile professor5 = facultyDirectory.newFacultyProfile(personDirectory.newPerson("01123005"));
 
-        if (courseoffer==null)return; 
-        
-        courseoffer.generatSeats(30); // allow for 30 open seats in the class
-        courseoffer2.generatSeats(50); // allow for 30 open seats in the class
-        courseoffer3.generatSeats(20);
-        courseoffer4.generatSeats(30);
-        courseoffer5.generatSeats(60);
-        courseoffer6.generatSeats(50);
-        courseoffer7.generatSeats(30);
-        courseoffer8.generatSeats(20);
-        courseoffer9.generatSeats(70);
-        courseoffer10.generatSeats(10);
+        coreOffer.AssignAsTeacher(professor1);
+        electiveOffer1.AssignAsTeacher(professor2);
+        electiveOffer2.AssignAsTeacher(professor3);
+        electiveOffer3.AssignAsTeacher(professor4);
+        electiveOffer4.AssignAsTeacher(professor5);
+        electiveOffer5.AssignAsTeacher(professor1); // Repeat professor for elective
 
+        // Create Students and Register in Classes
+        for (int i = 1; i <= 10; i++) {
+            String studentId = "01123" + String.format("%03d", i);
+            Person studentPerson = personDirectory.newPerson(studentId);
+            StudentProfile studentProfile = studentDirectory.newStudentProfile(studentPerson);
 
+            // Register each student in multiple classes for course load
+            CourseLoad courseLoad = studentProfile.newCourseLoad("Spring 2024");
 
+            // Register the student in courses and assign grades
+            SeatAssignment sa1 = courseLoad.registerStudentInClass(coreOffer);
+            SeatAssignment sa2 = courseLoad.registerStudentInClass(electiveOffer1);
+            SeatAssignment sa3 = courseLoad.registerStudentInClass(electiveOffer2);
+            SeatAssignment sa4 = courseLoad.registerStudentInClass(electiveOffer3);
 
+            // Manually assign grades for testing purposes
+            if (sa1 != null) sa1.grade = "A";
+            if (sa2 != null) sa2.grade = "B+";
+            if (sa3 != null) sa3.grade = "A-";
+            if (sa4 != null) sa4.grade = "B";
+        }
 
-//      Create teacher for class
-
-        Person person1 = persondirectory.newPerson("01123022"); //person for teacher role                  
-        Person person2 = persondirectory.newPerson("011230222"); 
-        Person person3 = persondirectory.newPerson("011230119");
-        Person person4 = persondirectory.newPerson("011230289");
-        Person person5 = persondirectory.newPerson("011230209");
-        Person person6 = persondirectory.newPerson("011230779");
-        Person person7 = persondirectory.newPerson("011230449");
-        Person person8 = persondirectory.newPerson("011390289");
-        Person person9 = persondirectory.newPerson("01127889");
-        Person person10 = persondirectory.newPerson("01127809");
-
-
-        FacultyDirectory facultydirectory = department.getFacultyDirectory();
-        FacultyProfile teacher = facultydirectory.newFacultyProfile(person1);
-        FacultyProfile teacher2 = facultydirectory.newFacultyProfile(person2);   
-        FacultyProfile teacher3 = facultydirectory.newFacultyProfile(person3);
-        FacultyProfile teacher4 = facultydirectory.newFacultyProfile(person4);
-        FacultyProfile teacher5 = facultydirectory.newFacultyProfile(person5);
-        FacultyProfile teacher6 = facultydirectory.newFacultyProfile(person6);
-        FacultyProfile teacher7 = facultydirectory.newFacultyProfile(person7);
-        FacultyProfile teacher8 = facultydirectory.newFacultyProfile(person8);
-        FacultyProfile teacher9 = facultydirectory.newFacultyProfile(person9);
-        FacultyProfile teacher10 = facultydirectory.newFacultyProfile(person10);
-    
-       
-        courseoffer.AssignAsTeacher(teacher);//  teacher.AssignAsTeacher(courseoffer); // OR  both work
-        courseoffer.AssignAsTeacher(teacher2);//  teacher.AssignAsTeacher(courseoffer); // OR  both work
-        courseoffer.AssignAsTeacher(teacher3);
-        courseoffer.AssignAsTeacher(teacher4);
-        courseoffer.AssignAsTeacher(teacher5);
-        courseoffer.AssignAsTeacher(teacher6);
-        courseoffer.AssignAsTeacher(teacher7);
-        courseoffer.AssignAsTeacher(teacher8);
-        courseoffer.AssignAsTeacher(teacher9);
-        courseoffer.AssignAsTeacher(teacher10);
-        
-    //  Create student     
- 
-        Person person11 = persondirectory.newPerson("0112303");  
-        Person person12 = persondirectory.newPerson("01123834"); 
-        Person person13 = persondirectory.newPerson("0135308");  
-        Person person14 = persondirectory.newPerson("01177039"); 
-        Person person15 = persondirectory.newPerson("015509");  
-        Person person16 = persondirectory.newPerson("011443038"); 
-        Person person17 = persondirectory.newPerson("0193038"); 
-        Person person18 = persondirectory.newPerson("01123038"); 
-        Person person19 = persondirectory.newPerson("017843038"); 
-        Person person20 = persondirectory.newPerson("01146738");   
-        
-        StudentDirectory sd = department.getStudentDirectory();
-        StudentProfile student = sd.newStudentProfile(person11); 
-        StudentProfile student2 = sd.newStudentProfile(person12);
-        StudentProfile student3 = sd.newStudentProfile(person13);
-        StudentProfile student4 = sd.newStudentProfile(person14);
-        StudentProfile student5 = sd.newStudentProfile(person15);
-        StudentProfile student6 = sd.newStudentProfile(person16);
-        StudentProfile student7 = sd.newStudentProfile(person17);
-        StudentProfile student8 = sd.newStudentProfile(person18);
-        StudentProfile student9 = sd.newStudentProfile(person19);
-        StudentProfile student10 = sd.newStudentProfile(person20);
-
-
-
-    //  Register student in class for the load of the spring semester     
-        CourseLoad courseload = student.newCourseLoad("Spring 2024");
-        CourseLoad courseload1 = student2.newCourseLoad("Spring 2024");
-        CourseLoad courseload2 = student3.newCourseLoad("Spring 2024");
-        CourseLoad courseload3 = student4.newCourseLoad("Spring 2024");
-        CourseLoad courseload4 = student5.newCourseLoad("Spring 2024");
-        CourseLoad courseload5 = student6.newCourseLoad("Spring 2024");
-        CourseLoad courseload6 = student7.newCourseLoad("Spring 2024");
-        CourseLoad courseload7 = student8.newCourseLoad("Spring 2024");
-        CourseLoad courseload8 = student9.newCourseLoad("Spring 2024");
-        CourseLoad courseload9 = student10.newCourseLoad("Spring 2024"); 
-
-
-        courseload.registerStudentInClass(courseoffer); //register student in class Info 6205
-        courseload.registerStudentInClass(courseoffer2);//same student signed up for 2 classes
-        courseload2.registerStudentInClass(courseoffer2);
-        
-        int total = department.calculateRevenuesBySemester("Spring 2024");
-        System.out.print("Total:  " + total+"    ");
-
+        // Calculate revenue and print semester report
+        int totalRevenue = department.calculateRevenuesBySemester("Spring 2024");
+        System.out.println("Total Revenue for Spring 2024: $" + totalRevenue);
+        printReportForSemester(studentDirectory, "Spring 2024");
     }
 
+    // Method to print detailed student report for a specific semester
+    public static void printReportForSemester(StudentDirectory studentDirectory, String semester) {
+        for (StudentProfile studentProfile : studentDirectory.getStudentlist()) {
+            CourseLoad semesterCourseLoad = studentProfile.getTranscript().getCourseLoadBySemester(semester);
+
+            if (semesterCourseLoad != null) {
+                float cumulativeGradePoints = 0;
+                int totalSemesterCredits = 0;
+                int totalTuitionFees = 0;
+
+                System.out.println("Student ID: " + studentProfile.getPerson().getPersonId());
+
+                for (SeatAssignment sa : semesterCourseLoad.getSeatAssignments()) {
+                    // Ensure grade is assigned before calculating GPA
+                    if (sa.grade == null) sa.grade = "B"; // Assign a default grade if null for testing
+
+                    // Print course and grade details
+                    System.out.println("Course: " + sa.getAssociatedCourse().getCOurseNumber() + " - " + sa.getAssociatedCourse().getName());
+                    System.out.println("Grade: " + sa.grade);
+
+                    // Calculate grade points and add to cumulative total
+                    cumulativeGradePoints += sa.getGrade() * sa.getCreditHours();
+                    totalSemesterCredits += sa.getCreditHours();
+
+                    // Calculate tuition fees based on credit hours and add to the total
+                    totalTuitionFees += sa.getCreditHours() * CREDIT_HOUR_TUITION_FEE;
+                }
+
+                float averageGPA = (totalSemesterCredits > 0) ? cumulativeGradePoints / totalSemesterCredits : 0;
+
+                // Print student report with average GPA and total tuition fees
+                System.out.println("Average GPA: " + averageGPA);
+                System.out.println("Total Tuition Fees Paid: $" + totalTuitionFees);
+                System.out.println("----------");
+            }
+        }
+    }
 }

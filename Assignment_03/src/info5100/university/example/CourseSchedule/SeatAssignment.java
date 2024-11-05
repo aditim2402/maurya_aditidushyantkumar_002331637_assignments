@@ -3,6 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package info5100.university.example.CourseSchedule;
 
 import info5100.university.example.CourseCatalog.Course;
@@ -12,41 +17,64 @@ import info5100.university.example.CourseCatalog.Course;
  * @author kal bugrara
  */
 public class SeatAssignment {
-    float grade; //(Letter grade mappings: A=4.0, A-=3.7, B+=3.3, B=3.0, )
+    public String grade="F"; // Stores letter grade (e.g., A, A-, B+)
+    
+    // Returns the numeric grade based on letter grade mappings
+    public float getGrade() {
+        switch (this.grade) {
+            case "A": return 4.0f;
+            case "A-": return 3.7f;
+            case "B+": return 3.3f;
+            case "B": return 3.0f;
+            case "C": return 2.0f;
+            case "D": return 1.0f;
+            case "F": return 0.0f;
+            default: return 0.0f;
+        }
+    }
+
     Seat seat;
-    boolean like; //true means like and false means not like
+    boolean like; // true means like, false means dislike
     CourseLoad courseload;
-    public SeatAssignment(CourseLoad cl, Seat s){
+
+    // Constructor to initialize SeatAssignment with CourseLoad and Seat
+    public SeatAssignment(CourseLoad cl, Seat s) {
         seat = s;
         courseload = cl;
     }
-     
-    public boolean getLike(){
+
+    // Returns whether the student likes the seat assignment
+    public boolean getLike() {
         return like;
     }
-    public void assignSeatToStudent(CourseLoad cl){
+
+    // Assigns the seat to a student's course load
+    public void assignSeatToStudent(CourseLoad cl) {
         courseload = cl;
     }
-    
-    public int getCreditHours(){
+
+    // Returns the credit hours for the course associated with the seat
+    public int getCreditHours() {
         return seat.getCourseCredits();
-       
     }
-    public Seat getSeat(){
+
+    // Returns the assigned seat
+    public Seat getSeat() {
         return seat;
     }
-    public CourseOffer getCourseOffer(){
-        
+
+    // Returns the course offer associated with this seat assignment
+    public CourseOffer getCourseOffer() {
         return seat.getCourseOffer();
     }
-    public Course getAssociatedCourse(){
-        
+
+    // Returns the course associated with this seat assignment
+    public Course getAssociatedCourse() {
         return getCourseOffer().getSubjectCourse();
     }
-    public float GetCourseStudentScore(){
-        return getCreditHours()*grade;
+
+    // Calculates and returns the course student score based on the grade and credit hours
+    public float getCourseStudentScore() {
+        return getCreditHours() * getGrade();
     }
-    
-    
-    
 }
