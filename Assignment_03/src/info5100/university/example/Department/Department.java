@@ -115,4 +115,18 @@ public class Department {
         co.assignEmptySeat(cl);
 
     }
+    public void browseCourses() {
+        System.out.println("\n--- Browsing All Courses in Department: " + name + " ---");
+        
+        // Display core courses
+        System.out.println("Core Courses:");
+        for (Course course : degree.getCorelist()) {
+            System.out.println("  " + course);
+        }
+        
+        // Display elective courses
+        System.out.println("Elective Courses:");
+        for (Course course : degree.getElectives()) {
+            System.out.println("  " + course);}
+}
 }

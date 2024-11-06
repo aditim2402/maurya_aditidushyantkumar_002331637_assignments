@@ -44,5 +44,9 @@ public class Course {
         return credits;
     
 }
-    
+@Override
+public String toString() {
+    return number + ": " + name + " (" + credits + " credits)";
+}
+
 }

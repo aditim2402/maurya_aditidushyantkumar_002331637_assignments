@@ -18,6 +18,14 @@ public class Degree {
 
     String title;
     ArrayList<Course> corelist;
+    public ArrayList<Course> getCorelist() {
+        return corelist;
+    }
+
+    public ArrayList<Course> getElectives() {
+        return electives;
+    }
+
     ArrayList<Course> electives;
 
     public Degree(String name) {

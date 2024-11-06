@@ -147,7 +147,8 @@ public class Info5001UniversityExample {
         // Calculate and print department revenue for Spring 2024
         int totalRevenue = department.calculateRevenuesBySemester("Spring 2024");
         System.out.println("Total Revenue for Spring 2024: $" + totalRevenue);
-
+        //Browse course
+        department.browseCourses();
         // Print report for each semester
         printReportForSemester(studentDirectory, "Spring 2024");
         printReportForSemester(studentDirectory, "Fall 2024");
